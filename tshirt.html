@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áo T-shirt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.0.1/css/boxicons.min.css">
+    <link rel="stylesheet" href="./assets/css/tshirt.css"/>
+    <script src="https://kit.fontawesome.com/9a6d25af5b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="header">
+        <div class="grid">
+            <div class="header__container">
+                <div class="logo">
+                    <img src="https://github.com/chenjiinguyen/C4E-NHOM3DACK1/blob/MHD/assets/img/logo.png?raw=true" alt="">
+                </div>
+                <div class="navbar">
+                    <ul>
+                        <li class="navbar-item"><a href="#">Trang chủ</a></li>
+                        <li class="navbar-item"><a href="#">Sản phẩm <i class='bx bx-chevron-down'></i></a>
+                        <ul class="subnav">
+                            <li class="subnav-item"><a href="#t-shirt">T-Shirt</a></li>
+                            <li class="subnav-item"><a href="#sweater">Sweater</a></li>
+                            <li class="subnav-item"><a href="#hoodie">Hoodie</a></li>
+                        </ul></li>
+                        <li class="navbar-item"><a href="#contact">Liên hệ</a></li>
+                        <li class="navbar-item cart"><a href="#"><i class='bx bxs-shopping-bag'></i> Giỏ hàng <span id="quantity">0</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main-content grid">
+        <h2>Bộ sưu tập T-SHIRT</h2>
+        <div class="store">
+            <div class="product">
+                <img class="product" src="https://product.hstatic.net/200000249781/product/donotdisturb-bt-b-t_943fc13b14704181b5b4edb51812caa8_1024x1024.jpg">
+                <div class="middle">
+                    <div class="text"><i class='bx bx-search'></i></div>
+                </div>
+                <span class="product-name">Áo phông 1</span>
+                <span class="product-price">250000</span>
+            </div>
+        </div>
+    </div>
+    <div class="shopping-box">
+        <div class="shopping-image">
+            <img src="https://product.hstatic.net/200000249781/product/donotdisturb-bt-b-t_943fc13b14704181b5b4edb51812caa8_1024x1024.jpg" style="max-width: 100%;">
+        </div>
+        <div class="shopping-info">
+            <h1 style="text-align: center;">Áo phông 1</h1>
+            <div class="shopping-size">
+                <span class="shopping-size">Chọn cỡ áo: </span>
+                <span class="shopping-button">
+                    <button class="shopping-size">S</button>
+                    <button class="shopping-size">M</button>
+                    <button class="shopping-size">L</button>
+                    <button class="shopping-size">XL</button>
+                    <button class="shopping-size">XXL</button>
+                </span>
+            </div>
+            <div class="shopping-number">
+                <span>Số lượng: </span> <input type="number" min="1" size="10%">
+            </div>
+            <div class="shopping-price">250,000 VND</div>
+            <button class="add-to-cart">Thêm vào giỏ hàng</button>
+            <button class="close-box">Xem các mẫu khác</button>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="grid">
+            <div class="contact-form">
+                <h3>Thông tin tư vấn</h3>
+                <form>
+                    <div class="row">
+                      <div class="col-25">
+                        <label for="fname">Họ tên</label>
+                      </div>
+                      <div class="col-75">
+                        <input type="text" id="fname" name="fullname" required>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-25">
+                        <label for="address">Địa chỉ</label>
+                      </div>
+                      <div class="col-75">
+                        <input type="text" id="address" name="address" required>
+                      </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                          <label for="phone-num">Số điện thoại</label>
+                        </div>
+                        <div class="col-75">
+                          <input type="tel" id="phone-num" name="phone-num" required>
+                        </div>
+                      </div>
+                    <div class="row">
+                        <div class="col-25">
+                          <label for="email">Email</label>
+                        </div>
+                        <div class="col-75">
+                          <input type="email" id="email" name="email" required>
+                        </div>
+                      </div>
+                    <br>
+                    <div class="row">
+                      <input type="submit" value="Submit">
+                    </div>
+                    </form>
+            </div>
+            <div class="social-network">
+                <ul class="social">
+                    <li class="social-item social-item--facebook">
+                        <a href="https://www.facebook.com/" target="_blank"><i class='bx bxl-facebook-square'></i></a>
+                    </li>
+                    <li class="social-item social-item--twitter">
+                        <a href="https://twitter.com/" target="_blank"><i class='bx bxl-twitter' ></i></a>
+                    </li>
+                    <li class="social-item social-item--telegram">
+                        <a href="https://web.telegram.org/" target="_blank"><i class='bx bxl-telegram'></i></a>
+                    </li>
+                    <li class="social-item social-item--instagram">
+                        <a href="https://www.instagram.com/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                    </li>
+                  </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="grid">
+            <p>© Bản quyền thuộc về ...</p>
+        </div>
+    </footer>
+</div>
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
