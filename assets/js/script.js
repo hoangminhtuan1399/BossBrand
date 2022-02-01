@@ -13,7 +13,7 @@ for (const item of products) {
     </div>
     `;
 }
-//Hiện shopping box
+//Hiện shopping-box
 const productList = document.querySelectorAll("div.product");
 const shoppingBox = document.querySelector("div.shopping-box");
 shoppingBox.innerHTML = "";
@@ -38,17 +38,27 @@ for (let i = 0; i < productList.length; i++) {
                 </span>
             </div>
             <div class="shopping-number">
-                <span>Số lượng: </span> <input type="number" min="1" placeholder="1">
+                <span>Số lượng: </span> <input class="shopping-number" type="number" min="1">
             </div>
-            <div class="shopping-price">${products[i].money}</div>
+            <div class="shopping-price">${products[i].price} VND</div>
             <button class="add-to-cart">Thêm vào giỏ hàng</button>
             <button class="close-box">Xem các mẫu khác</button>
         </div>`
+    //Tính tiền tại shopping-box
+    const shoppingNumber = document.querySelector("input.shopping-number");
+    const shoppingPrice = document.querySelector(".shopping-price");
+    shoppingNumber.defaultValue = 1;
+    shoppingNumber.addEventListener("change", function(){
+        shoppingNumber.value != "" ? shoppingPrice.innerHTML = `${products[i].price*parseInt(shoppingNumber.value)} VND` : shoppingPrice.innerHTML = `0 VND`;   
+    });
+    //Đóng shopping-box
     const closeButton = document.querySelector("button.close-box");
     closeButton.addEventListener("click", function(){
         shoppingBox.style.display = "none";
     })
 });
 }
+
+
 
 
