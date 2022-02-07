@@ -5,7 +5,6 @@ const products = [
         price : 250000,
         image : "./assets/image/aothun1.jpg",
         money : "250,000 VND",
-        category : "tshirt"
     },
     {
         id : "aothun2",
@@ -13,7 +12,6 @@ const products = [
         price : 220000,
         image : "./assets/image/aothun2.jpg",
         money : "220,000 VND",
-        category : "tshirt"
     },
     {
         id : "aothun3",
@@ -21,7 +19,6 @@ const products = [
         price : 330000,
         image : "./assets/image/aothun3.jpg",
         money : "330,000 VND",
-        category : "tshirt"
     },
     {
         id : "aothun4",
@@ -29,7 +26,6 @@ const products = [
         price : 250000,
         image : "./assets/image/aothun4.jpg",
         money : "250,000 VND",
-        category : "tshirt"
     },
     {
         id : "aothun5",
@@ -37,7 +33,6 @@ const products = [
         price : 270000,
         image : "./assets/image/aothun5.jpg",
         money : "270,000 VND",
-        category : "tshirt"
     },
     {
         id : "aothun6",
@@ -45,7 +40,6 @@ const products = [
         price : 190000,
         image : "./assets/image/aothun6.jpg",
         money : "190,000 VND",
-        category : "tshirt"
     },
     {
         id : "aothun7",
@@ -53,7 +47,6 @@ const products = [
         price : 250000,
         image : "./assets/image/aothun7.jpg",
         money : "250,000 VND",
-        category : "tshirt"
     },
     {
         id : "aothun8",
@@ -61,7 +54,6 @@ const products = [
         price : 150000,
         image : "./assets/image/aothun8.jpg",
         money : "150,000 VND",
-        category : "tshirt"
     },
     {
         id : "aothun9",
@@ -69,6 +61,5 @@ const products = [
         price : 330000,
         image : "./assets/image/aothun9.jpg",
         money : "330,000 VND",
-        category : "tshirt"
     }
 ]
