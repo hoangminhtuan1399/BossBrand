@@ -17,7 +17,8 @@ for (const item of products) {
 let shoppingList = [];
 const shoppingQuantity = document.querySelector("#quantity");
 if (JSON.parse(localStorage.getItem("shoppingList"))) {
-    shoppingQuantity.innerHTML = JSON.parse(localStorage.getItem("shoppingList")).length;
+    shoppingList = JSON.parse(localStorage.getItem("shoppingList"));
+    shoppingQuantity.innerHTML = shoppingList.length;
 } else {
     shoppingQuantity.innerHTML = 0;
 }
@@ -88,12 +89,28 @@ for (let i = 0; i < productList.length; i++) {
     //Chốt đơn
         const addButton = document.querySelector("button.add-to-cart");
         addButton.addEventListener("click",function(event){
-            shoppingList.push({
-                name : products[i].name,
-                quantity : parseInt(shoppingNumber.value),
-                price : parseInt(shoppingNumber.value)*products[i].price,
-                size : document.querySelector("button.selected").innerText,
-            });
+            let size = document.querySelector("button.selected");
+            let find = false;
+            for (let k = 0; k < shoppingList.length; k++) {
+                if (shoppingList[k].id == products[i].id) {
+                    if (shoppingList[k].size == size.innerText) {
+                        find = true;
+                        shoppingList[k].quantity += parseInt(shoppingNumber.value);
+                        shoppingList[k].price = shoppingList[k].quantity*products[i].price;
+                    } else {
+                        continue;
+                    } 
+                }
+            }
+            if (find == false) {
+                shoppingList.push({
+                    id : products[i].id,
+                    name : products[i].name,
+                    quantity : parseInt(shoppingNumber.value),
+                    price : parseInt(shoppingNumber.value)*products[i].price,
+                    size : size.innerText,
+                })  
+            };
             localStorage.setItem("shoppingList", JSON.stringify(shoppingList));
             shoppingQuantity.innerHTML = `${JSON.parse(localStorage.getItem("shoppingList")).length}`;
             shoppingBox.style.display = "none";
