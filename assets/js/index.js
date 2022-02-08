@@ -46,3 +46,13 @@ function currentSlide(index) {
     slides[index-1].style.display = "block";  
     dots[index-1].className += " active";
 }
+
+//Cart
+let shoppingList = [];
+const shoppingQuantity = document.querySelector("#quantity");
+if (JSON.parse(localStorage.getItem("shoppingList"))) {
+    shoppingList = JSON.parse(localStorage.getItem("shoppingList"));
+    shoppingQuantity.innerText = shoppingList.length;
+} else {
+    shoppingQuantity.innerText = 0;
+}

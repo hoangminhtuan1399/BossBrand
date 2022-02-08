@@ -1,17 +1,24 @@
 //Tạo gian hàng
+const params = new Proxy(new URLSearchParams(window.location.search), {
+    get: (searchParams, prop) => searchParams.get(prop),
+});
 const store = document.querySelector("div.store");
 store.innerHTML = "";
 for (const item of products) {
-    store.innerHTML += `
-    <div class="product">
-        <img class="product" src="${item.image}">
-        <div class="middle">
-            <div class="text"><i class='bx bx-search'></i></div>
-        </div>
-        <span class="product-name">${item.name}</span>
-        <span class="product-price">${item.money}</span>
-    </div>
-    `;
+    if (item.category == params.category) {
+        store.innerHTML += `
+            <div class="product">
+            <img class="product" src="${item.image}">
+                <div class="middle">
+                    <div class="text"><i class='bx bx-search'></i></div>
+                </div>
+                <span class="product-name">${item.name}</span>
+                <span class="product-price">${item.money}</span>
+            </div>
+        `;
+        document.querySelector("title").innerHTML = `${item.title}`;
+        document.querySelector("div>h2").innerHTML = `Bộ sưu tập ${item.title}`;
+    }    
 }
 //Tạo danh sách mua hàng
 let shoppingList = [];
@@ -23,19 +30,30 @@ if (JSON.parse(localStorage.getItem("shoppingList"))) {
     shoppingQuantity.innerHTML = 0;
 }
 //Hiện shopping-box
+function productRender(category) {
+    let productRender = [];
+    for (let i = 0; i < products.length; i++) {
+        if (products[i].category == category) {
+            productRender.push(products[i]);
+        }
+    }
+    return productRender;
+}
+let vnd = Intl.NumberFormat("en-US");
 const productList = document.querySelectorAll("div.product");
 const shoppingBox = document.querySelector("div.shopping-box");
 shoppingBox.innerHTML = "";
 shoppingBox.style.display = "none";
 for (let i = 0; i < productList.length; i++) {
     productList[i].addEventListener("click", function() {
+        let productCategory = productRender(params.category);
         shoppingBox.style.display = "flex";
         shoppingBox.innerHTML = `
             <div class="shopping-image">
-                <img src="${products[i].image}">
+                <img src="${productCategory[i].image}">
             </div>
             <div class="shopping-info">
-                <h1 style="text-align: center; font-size: 25px">${products[i].name}</h1>
+                <h1 style="text-align: center; font-size: 25px">${productCategory[i].name}</h1>
                 <div class="shopping-size">
                     <span class="shopping-size">Chọn cỡ áo: </span>
                     <span class="shopping-button">
@@ -49,7 +67,7 @@ for (let i = 0; i < productList.length; i++) {
                 <div class="shopping-number">
                     <span>Số lượng: </span> <input class="shopping-number" type="number" min="1">
                 </div>
-                <div class="shopping-price">${products[i].price} VND</div>
+                <div class="shopping-price">${vnd.format(productCategory[i].price)} VND</div>
                 <button class="add-to-cart">Thêm vào giỏ hàng</button>
                 <button class="close-box">Xem các mẫu khác</button>
             </div>`
@@ -58,7 +76,7 @@ for (let i = 0; i < productList.length; i++) {
         const shoppingPrice = document.querySelector(".shopping-price");
         shoppingNumber.defaultValue = 1;
         shoppingNumber.addEventListener("change", function(){
-            shoppingNumber.value != "" ? shoppingPrice.innerHTML = `${products[i].price*parseInt(shoppingNumber.value)} VND` : shoppingPrice.innerHTML = `0 VND`;
+            shoppingNumber.value != "" ? shoppingPrice.innerHTML = `${vnd.format(productCategory[i].price*parseInt(shoppingNumber.value))} VND` : shoppingPrice.innerHTML = `0 VND`;
             if (shoppingNumber.value < 0) {
                 shoppingNumber.value = 0;
                 shoppingPrice.innerHTML = `0 VND`;
@@ -92,11 +110,11 @@ for (let i = 0; i < productList.length; i++) {
             let size = document.querySelector("button.selected");
             let find = false;
             for (let k = 0; k < shoppingList.length; k++) {
-                if (shoppingList[k].id == products[i].id) {
+                if (shoppingList[k].id == productCategory[i].id) {
                     if (shoppingList[k].size == size.innerText) {
                         find = true;
                         shoppingList[k].quantity += parseInt(shoppingNumber.value);
-                        shoppingList[k].price = shoppingList[k].quantity*products[i].price;
+                        shoppingList[k].price = shoppingList[k].quantity*productCategory[i].price;
                     } else {
                         continue;
                     } 
@@ -104,10 +122,10 @@ for (let i = 0; i < productList.length; i++) {
             }
             if (find == false) {
                 shoppingList.push({
-                    id : products[i].id,
-                    name : products[i].name,
+                    id : productCategory[i].id,
+                    name : productCategory[i].name,
                     quantity : parseInt(shoppingNumber.value),
-                    price : parseInt(shoppingNumber.value)*products[i].price,
+                    price : parseInt(shoppingNumber.value)*productCategory[i].price,
                     size : size.innerText,
                 })  
             };

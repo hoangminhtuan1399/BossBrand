@@ -6,6 +6,7 @@ const products = [
         image : "./assets/image/aothun1.jpg",
         money : "250,000 VND",
         category : "tshirt",
+        title : "T-Shirt",
     },
     {
         id : "aothun2",
@@ -14,6 +15,7 @@ const products = [
         image : "./assets/image/aothun2.jpg",
         money : "220,000 VND",
         category : "tshirt",
+        title : "T-Shirt",
     },
     {
         id : "aothun3",
@@ -22,6 +24,7 @@ const products = [
         image : "./assets/image/aothun3.jpg",
         money : "330,000 VND",
         category : "tshirt",
+        title : "T-Shirt",
     },
     {
         id : "aothun4",
@@ -30,6 +33,7 @@ const products = [
         image : "./assets/image/aothun4.jpg",
         money : "250,000 VND",
         category : "tshirt",
+        title : "T-Shirt",
     },
     {
         id : "aothun5",
@@ -38,6 +42,7 @@ const products = [
         image : "./assets/image/aothun5.jpg",
         money : "270,000 VND",
         category : "tshirt",
+        title : "T-Shirt",
     },
     {
         id : "aothun6",
@@ -46,6 +51,7 @@ const products = [
         image : "./assets/image/aothun6.jpg",
         money : "190,000 VND",
         category : "tshirt",
+        title : "T-Shirt",
     },
     {
         id : "aothun7",
@@ -54,6 +60,7 @@ const products = [
         image : "./assets/image/aothun7.jpg",
         money : "250,000 VND",
         category : "tshirt",
+        title : "T-Shirt",
     },
     {
         id : "aothun8",
@@ -62,6 +69,7 @@ const products = [
         image : "./assets/image/aothun8.jpg",
         money : "150,000 VND",
         category : "tshirt",
+        title : "T-Shirt",
     },
     {
         id : "aothun9",
@@ -70,6 +78,7 @@ const products = [
         image : "./assets/image/aothun9.jpg",
         money : "330,000 VND",
         category : "tshirt",
+        title : "T-Shirt",
     },
     {
         id : "hoodie1",
@@ -78,6 +87,7 @@ const products = [
         image : "./assets/image/hoodie1.jpg",
         money : "420,000 VND",
         category : "hoodie",
+        title : "Hoodie",
     },
     {
         id : "hoodie2",
@@ -86,6 +96,7 @@ const products = [
         image : "./assets/image/hoodie2.jpg",
         money : "400,000 VND",
         category : "hoodie",
+        title : "Hoodie",
     },
     {
         id : "hoodie3",
@@ -94,6 +105,7 @@ const products = [
         image : "./assets/image/hoodie3.jpg",
         money : "470,000 VND",
         category : "hoodie",
+        title : "Hoodie",
     },
     {
         id : "hoodie4",
@@ -102,6 +114,7 @@ const products = [
         image : "./assets/image/hoodie4.jpg",
         money : "410,000 VND",
         category : "hoodie",
+        title : "Hoodie",
     },
     {
         id : "hoodie5",
@@ -110,6 +123,7 @@ const products = [
         image : "./assets/image/hoodie5.jpg",
         money : "370,000 VND",
         category : "hoodie",
+        title : "Hoodie",
     },
     {
         id : "hoodie6",
@@ -118,6 +132,7 @@ const products = [
         image : "./assets/image/hoodie6.jpg",
         money : "370,000 VND",
         category : "hoodie",
+        title : "Hoodie",
     },
     {
         id : "hoodie7",
@@ -126,6 +141,7 @@ const products = [
         image : "./assets/image/hoodie7.jpg",
         money : "350,000 VND",
         category : "hoodie",
+        title : "Hoodie",
     },
     {
         id : "hoodie8",
@@ -134,6 +150,7 @@ const products = [
         image : "./assets/image/hoodie8.jpg",
         money : "320,000 VND",
         category : "hoodie",
+        title : "Hoodie",
     },
     {
         id : "hoodie9",
@@ -142,6 +159,7 @@ const products = [
         image : "./assets/image/hoodie9.jpg",
         money : "390,000 VND",
         category : "hoodie",
+        title : "Hoodie",
     },
     {
         id : "sweater1",
@@ -150,6 +168,7 @@ const products = [
         image : "./assets/image/sweater1.jpg",
         money : "350,000 VND",
         category : "sweater",
+        title : "Sweater",
     },
     {
         id : "sweater2",
@@ -158,6 +177,7 @@ const products = [
         image : "./assets/image/sweater2.jpg",
         money : "380,000 VND",
         category : "sweater",
+        title : "Sweater",
     },
     {
         id : "sweater3",
@@ -166,6 +186,7 @@ const products = [
         image : "./assets/image/sweater3.jpg",
         money : "280,000 VND",
         category : "sweater",
+        title : "Sweater",
     },
     {
         id : "sweater4",
@@ -174,6 +195,7 @@ const products = [
         image : "./assets/image/sweater4.jpg",
         money : "400,000 VND",
         category : "sweater",
+        title : "Sweater",
     },
     {
         id : "sweater5",
@@ -182,6 +204,7 @@ const products = [
         image : "./assets/image/sweater5.jpg",
         money : "340,000 VND",
         category : "sweater",
+        title : "Sweater",
     },
     {
         id : "sweater6",
@@ -190,6 +213,7 @@ const products = [
         image : "./assets/image/sweater6.jpg",
         money : "370,000 VND",
         category : "sweater",
+        title : "Sweater",
     },
     {
         id : "sweater7",
@@ -198,6 +222,7 @@ const products = [
         image : "./assets/image/sweater7.jpg",
         money : "380,000 VND",
         category : "sweater",
+        title : "Sweater",
     },
     {
         id : "sweater8",
@@ -206,6 +231,7 @@ const products = [
         image : "./assets/image/sweater8.jpg",
         money : "300,000 VND",
         category : "sweater",
+        title : "Sweater",
     },
     {
         id : "sweater9",
@@ -214,5 +240,6 @@ const products = [
         image : "./assets/image/sweater9.jpg",
         money : "320,000 VND",
         category : "sweater",
+        title : "Sweater",
     },
 ]
