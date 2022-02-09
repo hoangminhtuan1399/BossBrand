@@ -35,13 +35,13 @@ const hoodieEl = document.querySelector('.hoodie__container');
 let tshirtHtml = getInnerHtml('t-shirt', 3);
 tshirtHtml += `
     <div class="t-shirt__poster">
-        <img src="./assets/image/t-shirt.jpg" alt="Avatar" class="image" style="width: 100%" />
+        <img src="./assets/img/t-shirt.jpg" alt="Avatar" class="image" style="width: 100%" />
     </div>
 `;
 
 let hoodieHtml = `
     <div class="hoodie__poster">
-        <img src="./assets/image/hoodie.jpg" alt="Avatar" class="image" style="height: 100%" />
+        <img src="./assets/img/hoodie.jpg" alt="Avatar" class="image" style="height: 100%" />
     </div>
 `;
 hoodieHtml += getInnerHtml('hoodie', 8);
