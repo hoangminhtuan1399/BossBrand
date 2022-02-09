@@ -183,8 +183,7 @@ img.product {
 }
 .middle .text {
     background-color: var(--nav-hover);
-    color: white;
-    font-size: 30px;
+    color: rgb(255, 255, 255);
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
@@ -211,71 +210,7 @@ span.product-price {
     text-align: center;
     cursor: pointer;
 }
-div.shopping-box {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    background-color: rgb(228, 228, 228);
-    transform: translate(-50%, -50%);
-    padding: 20px 0px 0px 20px;
-    display: flex;
-    border-radius: 10px;
-    border: 2px solid gray;
-}
-div.shopping-image {
-    width: 40%;
-}
-div.shopping-image>img {
-    max-width: 100%;
-    border: none;
-    border-radius: 8px;
-}
-div.shopping-info {
-    width: 60%;
-    padding: 0px 20px;
-}
-div.shopping-size {
-    font-size: 20px;
-    margin: 0px auto;
-    padding-top: 10px;
-}
-div.shopping-number {
-    margin-top: 5px;
-    font-size: 20px;
-}
-div.shopping-number>input {
-    width: 50px;
-    margin-left: 5px;
-}
-button.shopping-size {
-    font-size: 20px;
-    padding: 5px;
-    margin: 2px;
-    background-color: whitesmoke;
-    border-radius: 5px;
-}
-div.shopping-price {
-    font-size: 22px;
-    color: red;
-    text-align: center;
-    padding-top: 20px;
-}
-button.add-to-cart {
-    display: block;
-    margin: 20px auto;
-    font-size: 20px;
-    padding: 5px;
-    background-color: rgb(133, 170, 250);
-    border-radius: 5px;
-}
-button.close-box {
-    display: block;
-    margin: 20px auto;
-    font-size: 20px;
-    padding: 5px;
-    background-color: rgb(250, 141, 133);
-    border-radius: 5px;
-}
+
 #contact {
     width: 100%;
     height: 92vh;

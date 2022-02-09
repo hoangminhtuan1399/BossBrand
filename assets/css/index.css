@@ -2,10 +2,10 @@
 :root {
     --white-color: #fff;
     --text-color: #333;
-    --bg-color: rgb(248,248,248);
+    --bg-color: rgb(248, 248, 248);
     --primary-color: rgb(255, 156, 51);
     --nav-hover: rgb(255, 132, 0);
-    --blue-color: rgb(1,154,189);
+    --blue-color: rgb(1, 154, 189);
 }
 
 * {
@@ -141,24 +141,25 @@ ul {
     overflow: hidden;
 }
 
-  .mySlides {
-    display: none
-  }
-  
-  #slider img {
+.mySlides {
+    display: none;
+}
+
+#slider img {
     vertical-align: middle;
-  }
-  
-  .slideshow-container {
+}
+
+.slideshow-container {
     width: 100%;
     position: relative;
     height: 500px;
     overflow: hidden;
     margin-top: 90px;
     border-radius: 16px;
-  }
-  
-  .prev, .next {
+}
+
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -171,47 +172,57 @@ ul {
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-  }
-  
-  .next {
+}
+
+.next {
     right: 0;
     border-radius: 3px 0 0 3px;
-  }
-  
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
+}
 
-  .dot {
-	cursor: pointer;
-	height: 13px;
-	width: 13px;
-	margin: 0 2px;
-	background-color: #bbb;
-	border-radius: 50%;
-	display: inline-block;
-	transition: background-color 0.6s ease;
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
-.active, .dot:hover {
-	background-color: #717171;
+
+.dot {
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
 }
-  
-  .fade {
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+.fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1s;
     animation-name: fade;
     animation-duration: 1s;
-  }
-  
-  @-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
-  
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 h2 {
     font-size: 2.5rem;
@@ -221,12 +232,14 @@ h2 {
 }
 
 /* T-shirt + Sweater*/
-#t-shirt, #sweater {
+#t-shirt,
+#sweater {
     height: 100vh;
     width: 100%;
     padding-top: 80px;
 }
-.t-shirt__container, .Sweater__container {
+.t-shirt__container,
+.Sweater__container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 369px;
@@ -253,12 +266,12 @@ h2 {
     display: block;
     width: 100%;
     height: auto;
-    transition: .5s ease;
+    transition: 0.5s ease;
     backface-visibility: hidden;
-  }
-  
-  .middle {
-    transition: .5s ease;
+}
+
+.middle {
+    transition: 0.5s ease;
     opacity: 0;
     position: absolute;
     top: 40%;
@@ -266,135 +279,141 @@ h2 {
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
-  }
-  
-  .product__item:hover .image {
-    opacity: 0.3;
-  }
-  
-  .product__item:hover .middle {
-    opacity: 1;
-  }
+}
 
-  .product__item:hover .product_name {
-      color: var(--primary-color)
-  }
-  
-  .product__item .middle .text {
+.product__item:hover {
+    box-shadow: 0px 0px 6px 0px rgb(50 50 93 / 10%), 1px 1px 5px rgb(0 0 0 / 2%);
+}
+
+.product__item:hover .image {
+    opacity: 0.3;
+}
+
+.product__item:hover .middle {
+    opacity: 1;
+}
+
+.product__item:hover .product_name {
+    color: var(--primary-color);
+}
+
+.product__item .middle .text {
     background-color: var(--nav-hover);
     color: white;
     font-size: 16px;
     padding: 10px 12px;
     border-radius: 50%;
     cursor: pointer;
-  }
+}
 
-  .product__info {
-      height: calc(100% - 275px);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      margin-left: 12px;
-  }
+.product__info {
+    height: calc(100% - 275px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 12px;
+}
 
-  .product__info p{
-      font-size: 1.6rem;
-      color: red;
-      font-weight: 600;
-  }
+.product__info p {
+    font-size: 1.6rem;
+    color: red;
+    font-weight: 600;
+}
 
-    h4 {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--text-color);
-  }
+h4 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
 
-  .t-shirt__poster {
+.t-shirt__poster {
     border-radius: 0 40px 0 40px;
     width: 100%;
     height: 369px;
     overflow: hidden;
-  }
+}
 
-  .btn {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-  }
+.btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
-  .more_btn {
+.more_btn {
     text-decoration: none;
     color: var(--primary-color);
     border: 2px solid var(--primary-color);
     padding: 10px 18px;
     border-radius: 15px;
     font-size: 1.6rem;
-  }
+}
 
-  .more_btn:hover {
-      background-color: var(--primary-color);
-      color: var(--white-color);
-  }
+.more_btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
 
-  /* Hoodie */
- #hoodie {
+/* Hoodie */
+#hoodie {
     height: auto;
     width: 100%;
     padding-top: 80px;
- }
+}
 
-  .hoodie__container {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-      grid-template-rows: 369px 369px;
-      column-gap: 30px;
-      row-gap: 40px;
-      margin-bottom: 30px;
-  }
+.hoodie__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 369px 369px;
+    column-gap: 30px;
+    row-gap: 40px;
+    margin-bottom: 30px;
+}
 
-  .hoodie__poster {
-      grid-column-start: 1;
-      grid-column-end: 3;
-      overflow: hidden;
-      border-radius: 72px 0;
-  }
+.hoodie__poster {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    overflow: hidden;
+    border-radius: 72px 0;
+}
 
-  /* Contact */
-  #contact {
-      width: 100%;
-      height: 92vh;
-      padding-top: 100px;
-  }
+/* Contact */
+#contact {
+    width: 100%;
+    height: 92vh;
+    padding-top: 100px;
+}
 
-  .contact-form {
-      width: 700px;
-      margin: auto;
-  }
+.contact-form {
+    width: 700px;
+    margin: auto;
+}
 
-  h3 {
-      font-size: 2rem;
-      padding: 12px 0 12px 12px;
-      width: 100%;
-      background-color: var(--primary-color);
-      color: var(--white-color)
-  }
+h3 {
+    font-size: 2rem;
+    padding: 12px 0 12px 12px;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
 
-  input[type=text], input[type=tel], input[type=email] {
+input[type='text'],
+input[type='tel'],
+input[type='email'] {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
     font-size: 1.6rem;
-  }
-  
-  label {
+}
+
+label {
     padding: 12px 12px 12px 0;
     display: inline-block;
     font-size: 1.6rem;
-  }
-  
-  input[type=submit] {
+}
+
+input[type='submit'] {
     background-color: var(--primary-color);
     color: white;
     padding: 12px 20px;
@@ -403,43 +422,43 @@ h2 {
     cursor: pointer;
     float: right;
     font-size: 1.6rem;
-  }
-  
-  input[type=submit]:hover {
-    background-color: var(--nav-hover);
-  }
+}
 
-  .col-25 {
+input[type='submit']:hover {
+    background-color: var(--nav-hover);
+}
+
+.col-25 {
     float: left;
     width: 25%;
     margin-top: 6px;
-  }
-  
-  .col-75 {
+}
+
+.col-75 {
     float: left;
     width: 75%;
     margin-top: 6px;
-  }
-  
-  .row {
-      margin: 9px;
-  }
+}
 
-  .row:after {
-    content: "";
+.row {
+    margin: 9px;
+}
+
+.row:after {
+    content: '';
     display: table;
     clear: both;
-  }
+}
 
-  .social-network {
-      margin-top: 40px;
-  }
+.social-network {
+    margin-top: 40px;
+}
 
-  .social {
+.social {
     display: flex;
     justify-content: center;
-  }
-  .social-item a {
+}
+.social-item a {
     width: 5rem;
     height: 5rem;
     display: flex;
@@ -448,31 +467,32 @@ h2 {
     color: white;
     cursor: pointer;
     text-decoration: none;
-  }
-  .social-item--facebook {
+}
+.social-item--facebook {
     background-color: #3b5999;
-  }
-  .social-item--twitter {
+}
+.social-item--twitter {
     background-color: #55acee;
-  }
-  .social-item--telegram {
+}
+.social-item--telegram {
     background-color: #0077b5;
-  }
-  .social-item--instagram {
-    background-color: #E4405F;
-  }
-  
-  .social-item i {
-      font-size: 2.4rem;
-  }
+}
+.social-item--instagram {
+    background-color: #e4405f;
+}
 
-  #footer {
-      height: 8vh;
-      width: 100%;
-      background-color: var(--blue-color);
-  }
+.social-item i {
+    font-size: 2.4rem;
+}
 
-  #footer p {
-      font-size: 1.6rem;
-      line-height: 8vh;
-  }
+/* Foooter */
+#footer {
+    height: 8vh;
+    width: 100%;
+    background-color: var(--blue-color);
+}
+
+#footer p {
+    font-size: 1.6rem;
+    line-height: 8vh;
+}
