@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.0.1/css/boxicons.min.css">
     <link rel="stylesheet" href="./assets/css/payment.css">
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
     <title>Thanh toán</title>
 </head>
+
 <body>
     <div id="main">
         <div class="grid">
@@ -30,17 +34,11 @@
                                 <input type="email" class="user-mail" placeholder="Email" required>
                                 <input type="text" class="user-tel" placeholder="Số điện thoại" required>
                             </div>
-                            <input type="text" class="user-address" placeholder="Địa chỉ" required>
+                            <input type="text" class="user-address" placeholder="Nhập số nhà, ngõ (nếu có), đường/phố, ..." required>
                             <div class="address-wrapper">
-                                <select name="" class="provinces">
-                                    <option value="null">Chọn tỉnh/thành phố</option>
-                                </select>
-                                <select name="" class="districts">
-                                    <option value="null">Chọn quận/huyện</option>
-                                </select>
-                                <select name="" class="wards">
-                                    <option value="null">Chọn phường/xã</option>
-                                </select>
+                                <select class="local-picker" name="provinces"></select>
+                                <select class="local-picker" name="districts"></select>
+                                <select class="local-picker" name="wards"></select>
                             </div>
 
                             <h2>Phương thức thanh toán</h2>
@@ -54,7 +52,7 @@
                                     <label for="shop">Nhận hàng trực tiếp tại cửa hàng</label>
                                 </div>
                             </div>
-                            
+
                             <h2>Phương thức vận chuyển</h2>
                             <div class="pay-method">
                                 <div class="cod-wrapper">
@@ -67,7 +65,7 @@
                                 </div>
                             </div>
 
-                            <button type="submit">Hoàn tất đơn hàng</button>
+                            <button id="submit" type="submit">Hoàn tất đơn hàng</button>
                         </form>
                     </div>
                 </div>
@@ -86,7 +84,7 @@
                                         <div class="minus">
                                             <i class='bx bx-minus'></i>
                                         </div>
-                                        <input type="number" class="number" value="1" name="quantity" min="0" max="4"/>
+                                        <input type="number" class="number" value="1" name="quantity" min="0" max="4" />
                                         <div class="add">
                                             <i class='bx bx-plus'></i>
                                         </div>
@@ -99,7 +97,7 @@
 
                     <div class="promotion">
                         <div class="promotion-form">
-                            <input type="text" class="promotion-form-input" placeholder="Nhập mã giảm giá"/>
+                            <input type="text" class="promotion-form-input" placeholder="Nhập mã giảm giá" />
                             <button class="promotion-form-button">Sử dụng</button>
                         </div>
                     </div>
@@ -125,6 +123,8 @@
         </div>
     </div>
 
+    <script src="./assets/js/local-picker.min.js"></script>
     <script src="./assets/js/payment.js"></script>
 </body>
+
 </html>

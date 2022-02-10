@@ -2,10 +2,10 @@
 :root {
     --white-color: #fff;
     --text-color: #333;
-    --bg-color: rgb(248,248,248);
+    --bg-color: rgb(248, 248, 248);
     --primary-color: rgb(255, 156, 51);
     --nav-hover: rgb(255, 132, 0);
-    --blue-color: rgb(1,154,189);
+    --blue-color: rgb(1, 154, 189);
 }
 
 * {
@@ -58,7 +58,8 @@ h1 {
     margin-left: 20px;
 }
 
-.user-name, .user-address {
+.user-name,
+.user-address {
     width: 100%;
 }
 
@@ -68,7 +69,7 @@ h1 {
 
 .user-mail {
     width: 65%;
-} 
+}
 
 .user-tel {
     width: 35%;
@@ -79,22 +80,25 @@ h1 {
     display: flex;
 }
 
-.provinces, .districts, .wards {
-    width: calc(100%/3);
+.local-picker {
+    width: calc(100% / 3);
 }
 
-.districts {
-    margin: 0 20px;
+.local-picker + .local-picker {
+    margin-left: 20px;
 }
 
-input, label, select {
+input,
+label,
+select {
     font-size: 1.6rem;
     color: var(--text-color);
     padding: 10px 8px;
     border-radius: 4px;
 }
 
-input, select {
+input,
+select {
     border: none;
     box-shadow: 0 0 0 1px #d9d9d9;
 }
@@ -120,7 +124,8 @@ button:hover {
     background-color: var(--primary-color);
 }
 
-.address-wrapper, .contact-wrapper {
+.address-wrapper,
+.contact-wrapper {
     margin: 20px 0;
 }
 
@@ -134,19 +139,20 @@ h2:first-child {
     margin-top: 0;
 }
 
-.transport-method, .pay-method {
+.transport-method,
+.pay-method {
     border: none;
     border-radius: 4px;
     padding: 12px;
     box-shadow: 0 0 0 1px #d9d9d9;
 }
 
-input[type="radio"] {
+input[type='radio'] {
     box-shadow: none;
     margin: 10px 0;
 }
 
-input[type="radio"]:checked ~ label {
+input[type='radio']:checked ~ label {
     color: var(--nav-hover);
     font-weight: 500;
 }
@@ -200,8 +206,8 @@ input[type="radio"]:checked ~ label {
     outline: none;
     font-size: inherit;
 }
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
@@ -296,7 +302,8 @@ h3 {
     color: #969696;
 }
 
-.price, .shipping-price {
+.price,
+.shipping-price {
     font-size: 1.6rem;
     color: var(--text-color);
 }
