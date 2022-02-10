@@ -75,7 +75,6 @@ add.onclick = () => {
     if(number.value > 4) {
         number.value = 1
     }
-    
 }
 
 minus.onclick = () => {

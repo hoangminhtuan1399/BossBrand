@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.0.1/css/boxicons.min.css">
+    <link rel="stylesheet" href="./assets/css/payment.css">
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
+    <title>Thanh toán</title>
+</head>
+
+<body>
+    <div id="main">
+        <div class="grid">
+            <div class="left-col__header">
+                <img src="./assets/img/logo.png" alt="" class="logo">
+                <h1 style="text-transform: capitalize">boss brand</h1>
+            </div>
+            <div class="container">
+                <div class="left-col">
+                    <div class="left-col__info">
+                        <h2>Thông tin giao hàng</h2>
+                        <form action="" class="user-info">
+                            <input type="text" class="user-name" placeholder="Họ và tên" required>
+                            <div class="contact-wrapper">
+                                <input type="email" class="user-mail" placeholder="Email" required>
+                                <input type="text" class="user-tel" placeholder="Số điện thoại" required>
+                            </div>
+                            <input type="text" class="user-address" placeholder="Nhập số nhà, ngõ (nếu có), đường/phố, ..." required>
+                            <div class="address-wrapper">
+                                <select class="local-picker" name="provinces"></select>
+                                <select class="local-picker" name="districts"></select>
+                                <select class="local-picker" name="wards"></select>
+                            </div>
+
+                            <h2>Phương thức thanh toán</h2>
+                            <div class="transport-method">
+                                <div class="home-wrapper">
+                                    <input type="radio" name="transport" id="home" value="home" checked>
+                                    <label for="home">Giao hàng tận nơi (Toàn quốc)</label>
+                                </div>
+                                <div class="shop-wrapper" style="display: none;">
+                                    <input type="radio" name="transport" id="shop" value="shop">
+                                    <label for="shop">Nhận hàng trực tiếp tại cửa hàng</label>
+                                </div>
+                            </div>
+
+                            <h2>Phương thức vận chuyển</h2>
+                            <div class="pay-method">
+                                <div class="cod-wrapper">
+                                    <input type="radio" name="pay" id="cod" value="cod" checked>
+                                    <label for="cod">Thanh toán khi nhận hàng (COD)</label>
+                                </div>
+                                <div class="atm-wrapper">
+                                    <input type="radio" name="pay" id="atm" value="atm">
+                                    <label for="atm">Thanh toán bằng thẻ ngân hàng</label>
+                                </div>
+                            </div>
+
+                            <button id="submit" type="submit">Hoàn tất đơn hàng</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="right-col">
+                    <div class="right-col__content">
+                        <div class="product">
+                            <div class="product-wrapper">
+                                <div class="product_img">
+                                    <img src="./assets/img/t-shirts/tshirt1.jpg" alt="" style="width: 100%">
+                                </div>
+                                <div class="product_info">
+                                    <h3>T-shirt 1</h3>
+                                    <p class="size">Size: L</p>
+                                    <div class="quantity-input">
+                                        <div class="minus">
+                                            <i class='bx bx-minus'></i>
+                                        </div>
+                                        <input type="number" class="number" value="1" name="quantity" min="0" max="4" />
+                                        <div class="add">
+                                            <i class='bx bx-plus'></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="product_price">250.000 VND</span>
+                        </div>
+                    </div>
+
+                    <div class="promotion">
+                        <div class="promotion-form">
+                            <input type="text" class="promotion-form-input" placeholder="Nhập mã giảm giá" />
+                            <button class="promotion-form-button">Sử dụng</button>
+                        </div>
+                    </div>
+
+                    <div class="price-wrapper">
+                        <div class="price-line">
+                            <p class="price_name">Tạm tính</p>
+                            <p class="price">250000 VND</p>
+                        </div>
+
+                        <div class="price-line">
+                            <p class="price_name">Phí vận chuyển</p>
+                            <p class="shipping-price">0 VND</p>
+                        </div>
+                    </div>
+
+                    <div class="total">
+                        <p class="total_name">Tổng cộng</p>
+                        <p class="total_price">250000 VND</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/local-picker.min.js"></script>
+    <script src="./assets/js/payment.js"></script>
+</body>
+
+</html>
