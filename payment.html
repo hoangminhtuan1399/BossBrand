@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.0.1/css/boxicons.min.css">
     <link rel="stylesheet" href="./assets/css/payment.css">
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
     <title>Thanh toán</title>
 </head>
 
@@ -31,14 +32,14 @@
                         <form action="" class="user-info">
                             <input type="text" class="user-name" placeholder="Họ và tên" required>
                             <div class="contact-wrapper">
-                                <input type="email" class="user-mail" placeholder="Email" required>
+                                <input type="email" class="user-mail" placeholder="Email">
                                 <input type="text" class="user-tel" placeholder="Số điện thoại" required>
                             </div>
                             <input type="text" class="user-address" placeholder="Nhập số nhà, ngõ (nếu có), đường/phố, ..." required>
                             <div class="address-wrapper">
-                                <select class="local-picker" name="provinces"></select>
-                                <select class="local-picker" name="districts"></select>
-                                <select class="local-picker" name="wards"></select>
+                                <select class="local-picker" name="provinces" required></select>
+                                <select class="local-picker" name="districts" required></select>
+                                <select class="local-picker" name="wards" required></select>
                             </div>
 
                             <h2>Phương thức thanh toán</h2>
@@ -120,6 +121,11 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="box">
+            <div class="box-title"><h2>Đặt hàng thành công!</h2></div>
+            <div class="box-message"><p>Cảm ơn bạn đã ủng hộ BOSS BRAND.</p></div>
+            <div class="box-button"><a href="#"><button>Quay về trang chủ</button></a></div>
         </div>
     </div>
 

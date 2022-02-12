@@ -38,7 +38,7 @@ for (const item of products) {
                         <div class="minus">
                             <i class='bx bx-minus'></i>
                         </div>
-                        <input type="number" class="number" value="1" name="quantity" min="1" max="4"/>
+                        <input type="number" class="number" value="1" name="quantity" min="1"/>
                         <div class="add">
                             <i class='bx bx-plus'></i>
                         </div>
@@ -72,14 +72,11 @@ let add = document.querySelector(".add"),
 
 add.onclick = () => {
     number.value = parseInt(number.value) + 1
-    if(number.value > 4) {
-        number.value = 1
-    }
 }
 
 minus.onclick = () => {
     number.value = parseInt(number.value) - 1
     if(number.value < 1) {
-        number.value = 4
+        number.value = 1
     }
 }

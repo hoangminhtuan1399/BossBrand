@@ -237,7 +237,7 @@ label {
     font-size: 1.6rem;
 }
 .quantity-input > * {
-    padding: 6px 12px;
+    padding: 6px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -247,12 +247,13 @@ label {
     cursor: pointer;
 }
 .quantity-input .number {
-    width: 40px;
+    width: 50px;
     background-color: #f9faff;
     line-height: normal;
     border: 0;
     outline: none;
     font-size: inherit;
+    text-align: center;
 }
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -307,4 +308,5 @@ input[type="number"]::-webkit-outer-spin-button {
 #footer p {
     font-size: 1.6rem;
     line-height: 8vh;
+    color: white;
 }

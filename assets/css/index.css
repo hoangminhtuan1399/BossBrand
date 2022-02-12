@@ -490,6 +490,7 @@ input[type='submit']:hover {
     height: 8vh;
     width: 100%;
     background-color: var(--blue-color);
+    color: white;
 }
 
 #footer p {

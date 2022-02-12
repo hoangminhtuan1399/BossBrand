@@ -3,8 +3,9 @@ const price = document.querySelector("h2");
 const size = document.querySelector("select#size");
 const addtocart = document.querySelector("button.button-effect");
 const productName = document.querySelector("h1").innerText;
+const image = document.querySelector("img.image").getAttribute("src");
 //test
-console.log(typeof(parseInt(quantity.value)));
+// console.log(typeof(image));
 //Tạo danh sách giỏ hàng
 let shoppingList = [];
 if (JSON.parse(localStorage.getItem("shoppingList"))) {
@@ -28,8 +29,9 @@ addtocart.addEventListener("click", function(event){
         shoppingList.push({
             name : productName,
             size : size.value,
+            unitPrice : parseInt(price.innerHTML.substring(0,3))*1000,            
             quantity : parseInt(quantity.value),
-            price : parseInt(quantity.value)*parseInt(price.innerHTML.substring(0,3))*1000,
+            image : image,
         })
     }
     console.log(shoppingList);

@@ -326,4 +326,5 @@ input[type=submit]:hover {
 #footer p {
     font-size: 1.6rem;
     line-height: 8vh;
+    color: white;
 }

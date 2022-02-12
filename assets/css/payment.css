@@ -205,6 +205,7 @@ input[type='radio']:checked ~ label {
     border: 0;
     outline: none;
     font-size: inherit;
+    text-align: center;
 }
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
@@ -337,4 +338,45 @@ h3 {
     font-size: 2.4rem;
     color: var(--text-color);
     font-weight: 500;
+}
+
+i.material-icons {
+    font-size: 2rem;
+}
+
+i.material-icons:hover {
+    color: red;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.box {
+    width: 45vw;
+    height: 15vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid darkgray;
+    background-color: var(--bg-color);
+}
+.box-title {
+    padding-top: 5%;
+}
+.box-title > h2 {
+    font-size: 3rem;
+}
+.box-message > p {
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--nav-hover);
+}
+.box-button {
+    padding-bottom: 2%;
 }
