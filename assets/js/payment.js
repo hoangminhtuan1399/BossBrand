@@ -44,7 +44,7 @@ function updateShoppingList() {
                     </div>
                 </div>
             </div>
-            <span class="product_price">${format.format(shoppingList[i].quantity*shoppingList[i].unitPrice)} VND <i class="material-icons" title="Xóa khỏi giỏ hàng">remove_shopping_cart</i> </span>
+            <span> <span class="product_price">${format.format(shoppingList[i].quantity*shoppingList[i].unitPrice)} VND </span> <i class="material-icons" title="Xóa khỏi giỏ hàng">remove_shopping_cart</i> </span>
         </div>`;
     }
     const add = document.querySelectorAll('.add');
@@ -58,7 +58,7 @@ function updateShoppingList() {
         add[i].onclick = () => {
             number[i].value = parseInt(number[i].value) + 1; 
             item.quantity = number[i].value;
-            product_price[i].innerHTML = `${format.format(item.unitPrice*item.quantity)} VND <i class="material-icons" title="Xóa khỏi giỏ hàng">remove_shopping_cart</i>`; 
+            product_price[i].innerHTML = `${format.format(item.unitPrice*item.quantity)} VND`; 
             updatePrice();
             updateLocal();
         };
@@ -69,7 +69,7 @@ function updateShoppingList() {
                 number[i].value = 1;
             }
             item.quantity = number[i].value;
-            product_price[i].innerHTML = `${format.format(item.unitPrice*item.quantity)} VND <i class="material-icons" title="Xóa khỏi giỏ hàng">remove_shopping_cart</i>`; 
+            product_price[i].innerHTML = `${format.format(item.unitPrice*item.quantity)} VND `; 
             updatePrice();
             updateLocal();
         };
