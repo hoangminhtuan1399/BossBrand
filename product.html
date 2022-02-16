@@ -16,40 +16,86 @@
 </head>
 <body>
     <header id="header">
-        <div class="grid">
-            <div class="header__container">
-                <div class="logo">
-                  <a href="index.html">
-                    <img src="./assets/img/logo.png" alt="">
-                  </a>
-                </div>
-                <div class="navbar">
-                    <ul>
-                        <li class="navbar-item"><a href="index.html">Trang chủ</a></li>
-                        <li class="navbar-item"><a href="#">Sản phẩm <i class='bx bx-chevron-down'></i></a>
-                        <ul class="subnav">
-                            <li class="subnav-item"><a href="product.html?category=t-shirt">T-Shirt</a></li>
-                            <li class="subnav-item"><a href="product.html?category=sweater">Sweater</a></li>
-                            <li class="subnav-item"><a href="product.html?category=hoodie">Hoodie</a></li>
-                        </ul></li>
-                        <li class="navbar-item"><a href="#contact">Liên hệ</a></li>
-                        <li class="navbar-item cart"><a href="payment.html"><i class='bx bxs-shopping-bag'></i> Giỏ hàng <span id="quantity">0</span></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </header>
+      <div class="grid">
+          <div class="header__container">
+              <div class="left_header">
+                  <div class="logo">
+                      <a href="index.html">
+                      <img src="./assets/img/logo.png" alt="">
+                      </a>
+                  </div>
+                  <div class="simple-search">
+                      <div class="search">
+                          <input type="text" class="search-input" placeholder="Tìm kiếm sản phẩm"/>
+                          <button class="search-btn"><i class='bx bx-search-alt-2'></i></button>
+                      </div>
+                      <ul class="search-list">
+                          <li class="search-item"><a href="#" target="_blank">
+                              <div class="search-item__img"><img src="./assets/img/hoodies/hoodie1.jpg" alt="" style="width: 100%;"></div>
+                              <div class="search-item__text">
+                                  <p class="item-name">Hoodie 1</p>
+                                  <p class="item-price">350.000 VND</p>
+                              </div>
+                          </a></li>
+                      </ul>
+                  </div>
+              </div>
+
+              <div class="navbar">
+                  <ul>
+                      <li class="navbar-item">
+                          <a href="#">Trang chủ</a>
+                      </li>
+                      <li class="navbar-item">
+                          <a href="#">Sản phẩm
+                              <i class="bx bx-chevron-down"></i></a>
+                          <ul class="subnav">
+                              <li class="subnav-item">
+                                  <a href="product.html?category=t-shirt">T-Shirt</a>
+                              </li>
+                              <li class="subnav-item">
+                                  <a href="product.html?category=sweater">Sweater</a>
+                              </li>
+                              <li class="subnav-item">
+                                  <a href="product.html?category=hoodie">Hoodie</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="navbar-item">
+                          <a href="#contact">Liên hệ</a>
+                      </li>
+                      <li class="navbar-item">
+                          <a href="#"><i class='bx bx-package'></i> Tra cứu đơn hàng</a>
+                      </li>
+                      <li class="navbar-item cart">
+                          <a href="payment.html"><i class="bx bxs-shopping-bag"></i> Giỏ hàng <span id="quantity">0</span></a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </header>
     <div class="main-content grid">
-        <h2>Bộ sưu tập T-SHIRT</h2>
+        <div class="main_heading">
+          <h2>Ví dụ</h2>
+          <div class="filter-sort">
+            <select name="filter" id="filter" class="func">
+              <option value="" selected="" disabled="" hidden="">Bộ lọc</option>
+              <option value="1">Dưới 300 nghìn</option>
+              <option value="2">Từ 300 - 400 nghìn</option>
+              <option value="3">Trên 400 nghìn</option>
+              <option value="4">Tất cả</option>
+            </select>
+
+            <select name="sort" id="sort" class="func">
+              <option value="" selected="" disabled="" hidden="">Sắp xếp</option>
+              <option value="1">Giá từ cao đến thấp</option>
+              <option value="2">Giá từ thấp đến cao</option>
+            </select>
+          </div>
+        </div>
         <div class="store">
-            <div class="product">
-                <img class="product" src="https://product.hstatic.net/200000249781/product/donotdisturb-bt-b-t_943fc13b14704181b5b4edb51812caa8_1024x1024.jpg">
-                <div class="middle">
-                    <div class="text"><i class='bx bx-search'></i></div>
-                </div>
-                <span class="product-name">Áo phông 1</span>
-                <span class="product-price">250000</span>
-            </div>
+            
         </div>
     </div>
     <div id="contact">
@@ -78,7 +124,7 @@
                           <label for="phone-num">Số điện thoại</label>
                         </div>
                         <div class="col-75">
-                          <input type="tel" id="phone-num" name="phone-num" required>
+                          <input type="number" id="phone-num" name="phone-num" required>
                         </div>
                       </div>
                     <div class="row">

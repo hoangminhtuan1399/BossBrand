@@ -55,6 +55,113 @@ html {
     height: 100%;
 }
 
+.left_header {
+    display: flex;
+    align-items: center;
+}
+
+/* Search input */
+.simple-search {
+    background-color: rgb(240,242,245);
+    border-radius: 18px;
+    margin: 0 40px;
+    width: 360px;
+    position: relative;
+}
+
+.search {
+    background-color: rgb(240,242,245);
+    width: 100%;
+    height: 36px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    flex: 1;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    color: #65676B;
+    padding: 0 20px;
+    border-radius: 18px;
+    background-color: rgb(240,242,245);
+}
+
+.search-btn {
+    background-color: var(--primary-color);
+    border: none;
+    height: 30px;
+    width: 30px;
+    margin-right: 4px;
+    border-radius: 18px;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.6rem;
+    color: var(--white-color);
+}
+
+.search-btn:hover {
+    background-color: var(--nav-hover);
+}
+
+.search-list {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    width: 100%;
+    background-color: rgb(240,242,245);
+    border-radius: 18px;
+    box-shadow: 0 1px 12px rgb(180, 180, 180);
+    overflow: hidden;
+    display: none;
+}
+
+.search-item__img {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.search-item {
+    width: 100%;
+}
+
+.search-item > a {
+    display: flex;
+    padding: 12px 16px;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    height: 100%;
+}
+
+.search-item > a:hover {
+    background-color: rgb(228,228,228);
+}
+
+.item-name {
+    font-weight: 600;
+}
+
+.item-price {
+    font-size: 1.4rem;
+    color: #e4405f;
+    font-style: italic;
+}
+
+.search-item__text {
+    height: 60px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 ul {
     list-style: none;
     margin: 0;
@@ -81,6 +188,13 @@ ul {
 
 .bxs-shopping-bag {
     font-size: 2.2rem;
+    transform: translateY(1px);
+}
+
+.bx-package {
+    font-size: 2rem;
+    transform: translateY(3px);
+    margin-right: 2px;
 }
 
 #quantity {
@@ -211,6 +325,27 @@ span.product-price {
     cursor: pointer;
 }
 
+/* Filter - Sort */
+.main_heading {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 15px 0;
+}
+
+select {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    padding: 6px 4px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 0 1px #d9d9d9;
+}
+
+#sort {
+    margin-left: 10px;
+}
+
 #contact {
     width: 100%;
     height: 92vh;
@@ -230,35 +365,50 @@ h3 {
     color: var(--white-color)
 }
 
-input[type=text], input[type=tel], input[type=email] {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-  font-size: 1.6rem;
+.col-75 > input[type='text'],
+.col-75 > input[type='number'],
+.col-75 > input[type='email'] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-size: 1.6rem;
 }
 
-label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-  font-size: 1.6rem;
+.col-25 > label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    font-size: 1.6rem;
 }
 
-input[type=submit] {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
-  font-size: 1.6rem;
+.row > input[type='submit'] {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    font-size: 1.6rem;
 }
 
-input[type=submit]:hover {
-  background-color: var(--nav-hover);
+.row > input[type='submit']:hover {
+    background-color: var(--nav-hover);
 }
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 
 .col-25 {
   float: left;
@@ -312,7 +462,6 @@ input[type=submit]:hover {
 .social-item--instagram {
   background-color: #E4405F;
 }
-
 .social-item i {
     font-size: 2.4rem;
 }
