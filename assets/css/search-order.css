@@ -1,0 +1,333 @@
+#main {
+  background-color: var(--white-color);
+}
+
+.content-wrapper {
+  padding: 86px 0;
+  width: 100%;
+}
+
+.content_heading {
+  width: 68%;
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: var(--text-color);
+  margin-bottom: 40px;
+}
+
+.order-input {
+  width: 100%;
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.15);
+}
+.order-input > button {
+  padding: 15px 30px;
+  color: white;
+  flex-shrink: 0;
+  background-color: var(--primary-color);
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.order-input > input {
+  width: 100%;
+  padding: 15px;
+  background-color: white;
+  -webkit-appearance: none;
+  font-size: 1.6rem;
+  font-weight: 400;
+  border: none;
+  color: var(--text-color);
+  border-radius: 8px 0 0 8px;
+  box-shadow: 0 0 0 1px #d9d9d9;
+}
+
+.order-input > input:focus {
+  outline: none;
+  border: 2px solid var(--primary-color);
+}
+
+/* Khi bấm submit thì xóa class initial ở content_heading*/
+.initial {
+  padding-top: 120px;
+}
+
+/* Nếu mã đơn sai thì render ra div class="empty"*/
+.empty {
+  width: 100%;
+  margin: 0 auto;
+  /* display: flex; */
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  border-top: #000 2px solid;
+  margin: 48px auto 0 auto;
+  padding: 48px 20% 0 20%;
+}
+
+.empty > p {
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 2.6rem;
+  color: var(--text-color);
+}
+
+.empty > img {
+  width: 50%;
+  margin: 60px 0;
+}
+
+/* Nếu mã đơn đúng thì render ra class correct*/
+.correct {
+  width: 100%;
+  border-top: #000 2px solid;
+  margin: 48px 0 0 0;
+  padding-top: 48px;
+  /* display: block; */
+  display: none;
+}
+
+.order-status {
+  display: flex;
+  justify-content: center;
+}
+
+.step {
+  width: calc(100% / 4 - 30px);
+  height: 60px;
+  position: relative;
+  background: rgba(216, 216, 216, 0.8);
+  margin-right: 7px;
+}
+.step:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 30px solid white;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+}
+.step:before {
+  content: "";
+  position: absolute;
+  right: -30px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 30px solid rgba(216, 216, 216, 0.8);
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  z-index: 1;
+}
+
+.step > p {
+  margin: 0 0 0 50px;
+  color: var(--white-color);
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 60px;
+}
+
+.active {
+    background: rgb(48,48,48);
+}
+
+.active::before {
+    border-left: 30px solid rgb(48,48,48);
+}
+
+.active > p {
+    color: var(--primary-color);
+}
+
+.sub-status {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.sub-status > p {
+  width: calc(100% / 4 - 30px);
+  padding: 8px 20px;
+  text-align: justify;
+  font-size: 1.05rem;
+  color: var(--text-color);
+}
+
+.progress {
+    border-bottom: 2px dashed rgb(151,151,151);
+    padding-bottom: 16px;
+    margin-bottom: 32px;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    padding-bottom: 16px;
+}
+
+h3 > span {
+    color: var(--primary-color);
+}
+
+.box {
+    width: 100%;
+    background-color: rgb(242,242,242);
+    padding: 16px;
+    display: flex;
+    position: relative;
+}
+
+.user {
+    width: 50%;
+    border-right: 2px dashed rgb(151,151,151);
+    padding-right: 16px;
+}
+
+p {
+    color: var(--text-color);
+    font-size: 1.6rem;
+    margin: 16px 0;
+}
+
+.user > p {
+    color: #969696;
+    font-size: 1.4rem;
+}
+
+p > span {
+    color: var(--text-color);
+    font-size: 1.6rem;
+}
+
+.user p:first-child, .user p:last-child, .delivery p:first-child, .delivery p:last-child {
+    margin: 0;
+}
+
+.box h3 {
+    border-bottom: #000 2px solid;
+}
+
+.delivery {
+    width: 50%;
+    padding-left: 16px;
+    height: 100%;
+}
+
+.delivery-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 0;
+}
+
+.delivery-row > .title {
+    font-size: 1.4rem;
+    color: #969696;
+}
+
+.delivery-row > .price {
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+.total {
+    border-top: 2px dashed rgb(151,151,151);
+    padding-top: 24px;
+}
+
+.total-title {
+    font-weight: 500;
+}
+
+.total-price {
+    font-size: 2.4rem;
+    font-weight: 500px;
+}
+
+.delivery > a {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-decoration: none;
+    color: var(--white-color);
+    padding: 12px 16px;
+    font-size: 18px;
+    background-color: var(--primary-color);
+    margin: 0 16px 16px 0;
+}
+
+.delivery > a:hover {
+    background-color: var(--nav-hover);
+}
+
+.box:last-child {
+    display: block;
+    margin-top: 32px;
+}
+
+.product {
+    padding: 16px 0;
+    display: flex;
+    width: 92%;
+    justify-content: space-between;
+    border-bottom: 2px dashed rgb(151,151,151);
+    align-items: center;
+    margin: 0 auto;
+}
+
+.product-wrapper {
+    display: flex;
+}
+
+.product-img {
+    height: 180px;
+    width: 180px;
+    overflow: hidden;
+    margin-right: 40px;
+}
+
+h4 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 12px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.product-text {
+    margin: 6px 0;
+}
+
+.product-info p {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.product-info span {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.product-price {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 500;
+}
