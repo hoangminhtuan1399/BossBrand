@@ -29,6 +29,3 @@ for (const item of products) {
         document.querySelector("div>h2").innerHTML = `Bộ sưu tập ${item.title}`;
     }    
 }
-
-
-

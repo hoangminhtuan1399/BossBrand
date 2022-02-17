@@ -13,10 +13,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.0.1/css/boxicons.min.css" />
-    <link rel="stylesheet" href="./assets/css/index.css"/>
     <link rel="stylesheet" href="./assets/css/base.css"/>
+    <link rel="stylesheet" href="./assets/css/infor.css"/>
 </head>
 
 <body>
@@ -46,7 +45,7 @@
                             </ul>
                         </div>
                     </div>
-
+      
                     <div class="navbar">
                         <ul>
                             <li class="navbar-item">
@@ -57,13 +56,13 @@
                                     <i class="bx bx-chevron-down"></i></a>
                                 <ul class="subnav">
                                     <li class="subnav-item">
-                                        <a href="#t-shirt">T-Shirt</a>
+                                        <a href="product.html?category=t-shirt">T-Shirt</a>
                                     </li>
                                     <li class="subnav-item">
-                                        <a href="#sweater">Sweater</a>
+                                        <a href="product.html?category=sweater">Sweater</a>
                                     </li>
                                     <li class="subnav-item">
-                                        <a href="#hoodie">Hoodie</a>
+                                        <a href="product.html?category=hoodie">Hoodie</a>
                                     </li>
                                 </ul>
                             </li>
@@ -81,99 +80,28 @@
                 </div>
             </div>
         </header>
-
-        <div id="slider">
-            <div class="grid">
-                <div class="slideshow-container">
-                    <div class="mySlides fade"><a href="#tshirt"><img src="./assets/img/t-shirt__slider.jpg" style="width:100%"></a></div>
-                    <div class="mySlides fade"><a href="#sweater"><img src="./assets/img/sweater.jpg" style="width:100%"></a></div>
-                    <div class="mySlides fade"><a href="#hoodie"><img src="./assets/img/hoodie.jpg" style="width:100%"></a></div>
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next" onclick="plusSlides(1)">&#10095;</a> </div>
-                  <br>
-                  <div style="text-align:center"> 
-                  <span class="dot" onclick="currentSlide(1)"></span> 
-                  <span class="dot" onclick="currentSlide(2)"></span> 
-                  <span class="dot" onclick="currentSlide(3)"></span>          
-                  </div>
-            </div>
+        <div id="content" class="grid">
+            <div id="content__container">
+                <h2>Chính sách bảo mật</h2>
+                <br>
+                <p>Chính sách bảo mật này nhằm giúp Quý khách hiểu về cách website thu thập và sử dụng thông tin cá nhân 
+                    của mình thông qua việc sử dụng trang web, bao gồm mọi thông tin có thể cung cấp thông qua trang web 
+                    khi Quý khách đăng ký tài khoản, đăng ký nhận thông tin liên lạc từ chúng tôi, hoặc khi 
+                    Quý khách mua sản phẩm, dịch vụ, yêu cầu thêm thông tin dịch vụ từ chúng tôi.
+                </p>
+                <br>
+                <p>Chúng tôi sử dụng thông tin cá nhân của Quý khách để liên lạc khi cần thiết liên quan đến việc 
+                    Quý khách sử dụng website của chúng tôi, để trả lời các câu hỏi hoặc gửi tài liệu và thông tin Quý khách yêu cầu.
+                </p>
+                <br>
+                <p>Trang web của chúng tôi coi trọng việc bảo mật thông tin và sử dụng các biện pháp tốt nhất để bảo vệ thông tin
+                    cũng như việc thanh toán của khách hàng. 
+                </p> 
+                <br>
+                <p>Mọi thông tin giao dịch sẽ được bảo mật ngoại trừ trong trường hợp cơ quan pháp luật yêu cầu.
+                </p>        
+            </div>  
         </div>
-
-        <div id="container">
-            <div class="grid">
-                <div id="t-shirt">
-                    <h2>T-shirt</h2>
-                    <div class="t-shirt__container"></div>
-                    <div class="btn">
-                        <a href="product.html?category=t-shirt" class="more_btn">Xem thêm</a>
-                    </div>
-                </div>
-
-                <div id="sweater">
-                    <h2>Sweater</h2>
-                    <div class="Sweater__container"></div>
-                    <div class="btn">
-                        <a href="product.html?category=sweater" class="more_btn">Xem thêm</a>
-                    </div>
-                </div>
-
-                <div id="hoodie">
-                    <h2>Hoodie</h2>
-                    <div class="hoodie__container"></div>
-                    <div class="btn">
-                        <a href="product.html?category=hoodie" class="more_btn">Xem thêm</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="contact">
-            <div class="grid">
-                <div class="contact-form">
-                    <h3>Thông tin tư vấn</h3>
-                    <form>
-                        <div class="row">
-                            <div class="col-25">
-                                <label for="fname">Họ tên</label>
-                            </div>
-                            <div class="col-75">
-                                <input type="text" id="fname" name="fullname" required />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-25">
-                                <label for="address">Địa chỉ</label>
-                            </div>
-                            <div class="col-75">
-                                <input type="text" id="address" name="address" required />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-25">
-                                <label for="phone-num">Số điện thoại</label>
-                            </div>
-                            <div class="col-75">
-                                <input type="number" id="phone-num" name="phone-num" required />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-25">
-                                <label for="email">Email</label>
-                            </div>
-                            <div class="col-75">
-                                <input type="email" id="email" name="email"/>
-                            </div>
-                        </div>
-                        <br />
-                        <div class="row">
-                            <input type="submit" value="Submit" />
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <!-- footer tính từ đây nhé do tôi lười =)) -->
-
         <div class="infor">
             <div class="grid" id="infor-container">
                 <div id="about">
@@ -205,25 +133,18 @@
                         <li class="social-item social-item--instagram">
                             <a href="https://www.instagram.com/" target="_blank"><i class="bx bxl-instagram"></i></a>
                         </li>
-                    </ul> 
-                    </div>
-                    
+                    </ul>
                 </div>
             </div>
             
         </div>
-
         <footer id="footer">
             <div class="grid">
                 <p>© Bản quyền thuộc về BOSS BRAND</p>
             </div>
         </footer>
-        <!-- Hết footer -->
     </div>
-    
-    <script src="./assets/database/products.js"></script>
-    <script src="./assets/js/render.js"></script>
-    <script src="./assets/js/index.js"></script>
+    <script src="/assets/database/products.js"></script>
+    <script src="/assets/js/index.js"></script>
 </body>
-
 </html>
