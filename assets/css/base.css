@@ -28,6 +28,7 @@ html {
 
 #main {
     background-color: var(--bg-color);
+    width: 100vw;
 }
 
 /* Header */
@@ -246,4 +247,111 @@ ul {
 
 .navbar-item:hover .subnav {
     display: block;
+}
+
+/*footer tính từ đây nhé*/
+.social-network {
+    margin-top: 40px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+}
+.social-item a {
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+.social-item--facebook {
+    background-color: #3b5999;
+}
+.social-item--twitter {
+    background-color: #55acee;
+}
+.social-item--telegram {
+    background-color: #0077b5;
+}
+.social-item--instagram {
+    background-color: #e4405f;
+}
+
+.social-item i {
+    font-size: 2.4rem;
+}
+
+.infor {
+    width: 100vw;
+    height: 40vh;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#infor-container {
+    display: flex;
+    justify-content: space-between;
+    height: 80%;
+}
+#infor-container>div>h4 {
+    font-size: 2.2rem;
+    padding-bottom: 15px    ;
+}
+#infor-container>div>p {
+    font-size: 1.7rem;
+    color: whitesmoke;
+}
+#infor-container>div>p>i {
+    font-size: 2rem;
+}
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#information {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 16px;
+}
+#information>p {
+    padding: 10px 0px;
+}
+#information>p>a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1.7rem;
+}
+#information>p>a:hover {
+    color: orangered;
+}
+#social {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 16px;
+}
+#social>ul {
+    padding: 20px 0px;
+}
+li.social-item:hover {
+    transition-duration: 0.5s;
+    transform: translateY(-10px);
+}
+#footer {
+    height: 8vh;
+    width: 100vw;
+    background-color: var(--blue-color);
+    color: white;
+}
+
+#footer p {
+    font-size: 1.6rem;
+    line-height: 8vh;
 }
