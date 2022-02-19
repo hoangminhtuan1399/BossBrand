@@ -59,3 +59,18 @@ function currentSlide(index) {
     slides[index - 1].style.display = 'block';
     dots[index - 1].className += ' active';
 }
+
+const openChat = document.querySelector('.hotline-phone-ring-img-circle');
+const closeChat = document.querySelector('.close i');
+const chatBox = document.querySelector('.chat');
+const chatIcon = document.querySelector('.hotline-phone-ring')
+
+openChat.onclick = () => {
+    chatIcon.style.display = 'none'
+    chatBox.style.display = 'block'
+}
+
+closeChat.onclick = () => {
+    chatIcon.style.display = 'block'
+    chatBox.style.display = 'none'
+}

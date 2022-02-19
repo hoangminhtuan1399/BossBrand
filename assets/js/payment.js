@@ -1,6 +1,11 @@
 // Danh sách giỏ hàng
 const rightCol = document.querySelector(".right-col__content");
+const discountWrapper = document.querySelector('.discount-wrapper');
+const discountCode = document.querySelector('.discount-code');
+const promotionInput = document.querySelector('.promotion-form-input');
+const promotionBtn = document.querySelector('.promotion-form-button');
 let shoppingList = [];
+
 if (JSON.parse(localStorage.getItem("shoppingList"))) {
     shoppingList = JSON.parse(localStorage.getItem("shoppingList"));
 }
@@ -89,9 +94,10 @@ box.style.display = "none";
 form.addEventListener("submit",function(event){
     updateLocal();   
     if(JSON.parse(localStorage.getItem("shoppingList")).length > 0) {
+        let code = Math.random().toString(36).slice(-8);
         box.innerHTML = `
             <div class="box-title"><h2>Đặt hàng thành công!</h2></div>
-            <div class="box-message"><p>Cảm ơn bạn đã ủng hộ BOSS BRAND. <br/><br/> Đón chờ những sản phẩm tiếp theo của chúng tôi nhé!</p></div>
+            <div class="box-message"><p>Cảm ơn bạn đã ủng hộ BOSS BRAND. <br/><br/> Mã đơn hàng của bạn là: <span id='code'>${code}</span></p></div>
             <div class="box-button"><a href="index.html"><button>Quay về trang chủ</button></a></div>
         `;
         box.style.display = "flex";
