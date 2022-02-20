@@ -40,4 +40,3 @@ addtocart.addEventListener("click", function(event){
     localStorage.setItem("shoppingList",JSON.stringify(shoppingList));
     document.querySelector("span#quantity").innerText = shoppingList.length;
 })
-

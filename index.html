@@ -25,31 +25,23 @@
                 <div class="header__container">
                     <div class="left_header">
                         <div class="logo">
-                            <a href="index.html">
-                            <img src="./assets/img/logo.png" alt="">
+                            <a href="/">
+                                <img src="./assets/img/logo.png" alt="">
                             </a>
                         </div>
                         <div class="simple-search">
                             <div class="search">
-                                <input type="text" class="search-input" placeholder="Tìm kiếm sản phẩm"/>
+                                <input type="text" class="search-input" placeholder="Tìm kiếm sản phẩm" />
                                 <button class="search-btn"><i class='bx bx-search-alt-2'></i></button>
                             </div>
-                            <ul class="search-list">
-                                <li class="search-item"><a href="#" target="_blank">
-                                    <div class="search-item__img"><img src="./assets/img/hoodies/hoodie1.jpg" alt="" style="width: 100%;"></div>
-                                    <div class="search-item__text">
-                                        <p class="item-name">Hoodie 1</p>
-                                        <p class="item-price">350.000 VND</p>
-                                    </div>
-                                </a></li>
-                            </ul>
+                            <ul class="search-list"></ul>
                         </div>
                     </div>
 
                     <div class="navbar">
                         <ul>
                             <li class="navbar-item">
-                                <a href="#">Trang chủ</a>
+                                <a href="/">Trang chủ</a>
                             </li>
                             <li class="navbar-item">
                                 <a href="#">Sản phẩm
@@ -73,7 +65,8 @@
                                 <a href="./search-order.html"><i class='bx bx-package'></i> Tra cứu đơn hàng</a>
                             </li>
                             <li class="navbar-item cart">
-                                <a href="payment.html"><i class="bx bxs-shopping-bag"></i> Giỏ hàng <span id="quantity">0</span></a>
+                                <a href="payment.html"><i class="bx bxs-shopping-bag"></i> Giỏ hàng <span
+                                        id="quantity">0</span></a>
                             </li>
                         </ul>
                     </div>
@@ -84,16 +77,21 @@
         <div id="slider">
             <div class="grid">
                 <div class="slideshow-container">
-                    <div class="mySlides fade"><a href="#tshirt"><img src="./assets/img/t-shirt__slider.jpg" style="width:100%"></a></div>
-                    <div class="mySlides fade"><a href="#sweater"><img src="./assets/img/sweater.jpg" style="width:100%"></a></div>
-                    <div class="mySlides fade"><a href="#hoodie"><img src="./assets/img/hoodie.jpg" style="width:100%"></a></div>
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next" onclick="plusSlides(1)">&#10095;</a> </div>
-                  <br>
-                  <div style="text-align:center"> 
-                  <span class="dot" onclick="currentSlide(1)"></span> 
-                  <span class="dot" onclick="currentSlide(2)"></span> 
-                  <span class="dot" onclick="currentSlide(3)"></span>          
-                  </div>
+                    <div class="mySlides fade"><a href="#tshirt"><img src="./assets/img/t-shirt__slider.jpg"
+                                style="width:100%"></a></div>
+                    <div class="mySlides fade"><a href="#sweater"><img src="./assets/img/sweater.jpg"
+                                style="width:100%"></a></div>
+                    <div class="mySlides fade"><a href="#hoodie"><img src="./assets/img/hoodie.jpg"
+                                style="width:100%"></a></div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next"
+                        onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
             </div>
         </div>
 
@@ -192,7 +190,7 @@
         <div class="hotline-phone-ring">
             <div class="hotline-phone-ring-circle"></div>
             <div class="hotline-phone-ring-circle-fill"></div>
-            <div class="hotline-phone-ring-img-circle"> 
+            <div class="hotline-phone-ring-img-circle">
                 <i style="color:#fff;font-size: 3rem;" class="bx bxl-messenger"></i>
             </div>
         </div>
@@ -216,7 +214,8 @@
             <div class="chat-content">
                 <input type="text" name="" id="" class="user-input" placeholder="Họ tên" required>
                 <input type="number" name="" id="" class="user-input" placeholder="Số điện thoại" required>
-                <textarea rows="5" type="text" name="" id="" class="user-input" placeholder="Lời nhắn" required></textarea>
+                <textarea rows="5" type="text" name="" id="" class="user-input" placeholder="Lời nhắn"
+                    required></textarea>
                 <input type="submit" value="Bắt đầu trò chuyện">
             </div>
         </div>
@@ -227,10 +226,11 @@
             </div>
         </footer>
     </div>
-    
+
     <script src="./assets/database/products.js"></script>
     <script src="./assets/js/render.js"></script>
     <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/search.js"></script>
 </body>
 
 </html>

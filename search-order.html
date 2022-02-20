@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,6 +17,7 @@
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/search-order.css" />
 </head>
+
 <body>
     <div id="main">
         <header id="header">
@@ -23,31 +25,23 @@
                 <div class="header__container">
                     <div class="left_header">
                         <div class="logo">
-                            <a href="index.html">
-                            <img src="./assets/img/logo.png" alt="">
+                            <a href="/">
+                                <img src="./assets/img/logo.png" alt="">
                             </a>
                         </div>
                         <div class="simple-search">
                             <div class="search">
-                                <input type="text" class="search-input" placeholder="Tìm kiếm sản phẩm"/>
+                                <input type="text" class="search-input" placeholder="Tìm kiếm sản phẩm" />
                                 <button class="search-btn"><i class='bx bx-search-alt-2'></i></button>
                             </div>
-                            <ul class="search-list">
-                                <li class="search-item"><a href="#" target="_blank">
-                                    <div class="search-item__img"><img src="./assets/img/hoodies/hoodie1.jpg" alt="" style="width: 100%;"></div>
-                                    <div class="search-item__text">
-                                        <p class="item-name">Hoodie 1</p>
-                                        <p class="item-price">350.000 VND</p>
-                                    </div>
-                                </a></li>
-                            </ul>
+                            <ul class="search-list"></ul>
                         </div>
                     </div>
 
                     <div class="navbar">
                         <ul>
                             <li class="navbar-item">
-                                <a href="#">Trang chủ</a>
+                                <a href="/">Trang chủ</a>
                             </li>
                             <li class="navbar-item">
                                 <a href="#">Sản phẩm
@@ -68,7 +62,8 @@
                                 <a href="#contact">Liên hệ</a>
                             </li>
                             <li class="navbar-item cart">
-                                <a href="payment.html"><i class="bx bxs-shopping-bag"></i> Giỏ hàng <span id="quantity">0</span></a>
+                                <a href="payment.html"><i class="bx bxs-shopping-bag"></i> Giỏ hàng <span
+                                        id="quantity">0</span></a>
                             </li>
                         </ul>
                     </div>
@@ -81,18 +76,18 @@
                 <div class="content_heading initial">
                     <h1>thông tin đơn hàng</h1>
                     <div class="order-input">
-                        <input id="order-code" required type="text" placeholder="Mã đơn hàng"/>
+                        <input id="order-code" required type="text" placeholder="Mã đơn hàng" />
                         <button id="order-btn">Tra cứu đơn hàng</button>
                     </div>
                     <p class="error"></p>
                 </div>
 
                 <div class="empty">
-                    
+
                 </div>
 
                 <div class="correct">
-                    
+
                 </div>
             </div>
         </div>
@@ -101,4 +96,5 @@
     <script src="./assets/database/products.js"></script>
     <script src="./assets/js/search-order.js"></script>
 </body>
+
 </html>

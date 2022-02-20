@@ -62,7 +62,7 @@ html {
 
 /* Search input */
 .simple-search {
-    background-color: rgb(240,242,245);
+    background-color: rgb(240, 242, 245);
     border-radius: 18px;
     margin: 0 40px;
     width: 360px;
@@ -70,7 +70,7 @@ html {
 }
 
 .search {
-    background-color: rgb(240,242,245);
+    background-color: rgb(240, 242, 245);
     width: 100%;
     height: 36px;
     border-radius: 18px;
@@ -84,10 +84,10 @@ html {
     border: none;
     outline: none;
     font-size: 1.4rem;
-    color: #65676B;
+    color: #65676b;
     padding: 0 20px;
     border-radius: 18px;
-    background-color: rgb(240,242,245);
+    background-color: rgb(240, 242, 245);
 }
 
 .search-btn {
@@ -111,12 +111,19 @@ html {
     position: absolute;
     top: calc(100% + 4px);
     left: 0;
+    max-height: 250px;
+    overflow-y: auto;
     width: 100%;
-    background-color: rgb(240,242,245);
+    background-color: rgb(240, 242, 245);
     border-radius: 18px;
     box-shadow: 0 1px 12px rgb(180, 180, 180);
-    overflow: hidden;
     display: none;
+}
+
+.search-no-result {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: red;
 }
 
 .search-item__img {
@@ -141,7 +148,7 @@ html {
 }
 
 .search-item > a:hover {
-    background-color: rgb(228,228,228);
+    background-color: rgb(228, 228, 228);
 }
 
 .item-name {
@@ -423,8 +430,8 @@ ul {
     right: 0;
     bottom: 0;
     display: block;
-  }
-  .hotline-phone-ring-circle {
+}
+.hotline-phone-ring-circle {
     width: 85px;
     height: 85px;
     top: 2px;
@@ -440,8 +447,8 @@ ul {
     -ms-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     opacity: 0.5;
-  }
-  .hotline-phone-ring-circle-fill {
+}
+.hotline-phone-ring-circle-fill {
     width: 68px;
     height: 68px;
     top: 10px;
@@ -456,8 +463,8 @@ ul {
     -webkit-transform-origin: 50% 50%;
     -ms-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
-  }
-  .hotline-phone-ring-img-circle {
+}
+.hotline-phone-ring-img-circle {
     background-color: var(--nav-hover);
     width: 48px;
     height: 48px;
@@ -478,68 +485,68 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .hotline-phone-ring-img-circle {
+}
+.hotline-phone-ring-img-circle {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     cursor: pointer;
-  }
-  
-  @-webkit-keyframes phonering-alo-circle-anim {
+}
+
+@-webkit-keyframes phonering-alo-circle-anim {
     0% {
-      -webkit-transform: rotate(0) scale(0.5) skew(1deg);
-      -webkit-opacity: 0.1;
+        -webkit-transform: rotate(0) scale(0.5) skew(1deg);
+        -webkit-opacity: 0.1;
     }
     30% {
-      -webkit-transform: rotate(0) scale(0.7) skew(1deg);
-      -webkit-opacity: 0.5;
+        -webkit-transform: rotate(0) scale(0.7) skew(1deg);
+        -webkit-opacity: 0.5;
     }
     100% {
-      -webkit-transform: rotate(0) scale(1) skew(1deg);
-      -webkit-opacity: 0.1;
+        -webkit-transform: rotate(0) scale(1) skew(1deg);
+        -webkit-opacity: 0.1;
     }
-  }
-  @-webkit-keyframes phonering-alo-circle-fill-anim {
+}
+@-webkit-keyframes phonering-alo-circle-fill-anim {
     0% {
-      -webkit-transform: rotate(0) scale(0.7) skew(1deg);
-      opacity: 0.6;
+        -webkit-transform: rotate(0) scale(0.7) skew(1deg);
+        opacity: 0.6;
     }
     50% {
-      -webkit-transform: rotate(0) scale(1) skew(1deg);
-      opacity: 0.6;
+        -webkit-transform: rotate(0) scale(1) skew(1deg);
+        opacity: 0.6;
     }
     100% {
-      -webkit-transform: rotate(0) scale(0.7) skew(1deg);
-      opacity: 0.6;
+        -webkit-transform: rotate(0) scale(0.7) skew(1deg);
+        opacity: 0.6;
     }
-  }
-  @-webkit-keyframes phonering-alo-circle-img-anim {
+}
+@-webkit-keyframes phonering-alo-circle-img-anim {
     0% {
-      -webkit-transform: rotate(0) scale(1) skew(1deg);
+        -webkit-transform: rotate(0) scale(1) skew(1deg);
     }
     10% {
-      -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
+        -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
     }
     20% {
-      -webkit-transform: rotate(25deg) scale(1) skew(1deg);
+        -webkit-transform: rotate(25deg) scale(1) skew(1deg);
     }
     30% {
-      -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
+        -webkit-transform: rotate(-25deg) scale(1) skew(1deg);
     }
     40% {
-      -webkit-transform: rotate(25deg) scale(1) skew(1deg);
+        -webkit-transform: rotate(25deg) scale(1) skew(1deg);
     }
     50% {
-      -webkit-transform: rotate(0) scale(1) skew(1deg);
+        -webkit-transform: rotate(0) scale(1) skew(1deg);
     }
     100% {
-      -webkit-transform: rotate(0) scale(1) skew(1deg);
+        -webkit-transform: rotate(0) scale(1) skew(1deg);
     }
-  }
-  
-  .chat {
+}
+
+.chat {
     height: 450px;
     width: 340px;
     border-radius: 20px;
@@ -547,78 +554,78 @@ ul {
     position: fixed;
     bottom: 40px;
     right: 40px;
-    background-color: rgb(240,242,245);
+    background-color: rgb(240, 242, 245);
     box-shadow: 0 12px 16px rgb(180, 180, 180);
     z-index: 10;
     display: none;
-  }
-  
-  .chat-heading {
+}
+
+.chat-heading {
     background-color: var(--primary-color);
     display: flex;
     padding: 12px;
     justify-content: space-between;
-  }
-  
-  .admin {
+}
+
+.admin {
     display: flex;
     align-items: center;
-  }
-  
-  .admin-ava {
+}
+
+.admin-ava {
     width: 50px;
     height: 50px;
     background-color: var(--white-color);
     border-radius: 25px;
     padding: 2px;
-  }
-  
-  .admin-txt {
+}
+
+.admin-txt {
     margin-left: 12px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     height: 100%;
-  }
-  
-  .admin-txt > p {
+}
+
+.admin-txt > p {
     font-size: 1.4rem;
     color: var(--white-color);
     opacity: 0.8;
-  }
-  
-  p.admin-name {
+}
+
+p.admin-name {
     font-size: 1.6rem;
     opacity: 1;
     font-weight: 500;
-  }
-  
-  .close {
+}
+
+.close {
     font-size: 1.6rem;
     font-weight: 900px;
     color: var(--white-color);
     line-height: 50px;
-  }
-  
-  .close > i {
-    font-weight: 900; 
-    cursor: pointer; 
+}
+
+.close > i {
+    font-weight: 900;
+    cursor: pointer;
     padding: 4px;
     opacity: 0.8;
-  }
-  
-  .close > i:hover {
+}
+
+.close > i:hover {
     opacity: 1;
     background-color: var(--nav-hover);
     border-radius: 12px;
-  }
-  
-  .chat-content {
+}
+
+.chat-content {
     padding: 16px 24px;
-    display: block
-  }
-  
-  .user-input {
+    display: block;
+}
+
+.user-input {
     font-size: 1.6rem;
     color: var(--text-color);
     padding: 10px 8px;
@@ -627,13 +634,13 @@ ul {
     border: none;
     box-shadow: 0 0 0 1px #d9d9d9;
     width: 100%;
-  }
-  
-  textarea {
+}
+
+textarea {
     resize: none;
-  }
-  
-  .chat-content > input[type='submit'] {
+}
+
+.chat-content > input[type='submit'] {
     padding: 12px 20px;
     font-size: 1.6rem;
     border: none;
@@ -644,8 +651,20 @@ ul {
     cursor: pointer;
     margin-top: 20px;
     margin-left: 20%;
-  }
-  
-  .chat-content > input[type='submit']:hover {
+}
+
+.chat-content > input[type='submit']:hover {
     background-color: var(--primary-color);
-  }
+}
+
+/* Scroll bar */
+::-webkit-scrollbar {
+    width: 0.6rem;
+    background-color: #ccc;
+    border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 0.5rem;
+}
