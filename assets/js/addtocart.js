@@ -34,8 +34,8 @@ addtocart.addEventListener("click", function(event){
             image : image,
         })
     }
-    console.log(shoppingList);
     localStorage.setItem("shoppingList",JSON.stringify(shoppingList));
     document.querySelector("span#quantity").innerText = shoppingList.length;
+    updateCartList();
 })
 

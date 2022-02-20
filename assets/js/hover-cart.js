@@ -1,16 +1,16 @@
 const cart = document.querySelector("li.cart");
 const subcart_list = document.querySelector("ul.subcart");
-const quantity = document.querySelector("span#quantity");
-let shoppingList = [];
+const cart_quantity = document.querySelector("span#quantity");
+let shopping_list = [];
 function updateLocal() {
-    localStorage.setItem("shoppingList", JSON.stringify(shoppingList));
+    localStorage.setItem("shoppingList", JSON.stringify(shopping_list));
 }
 function updateCartList() {
     if (JSON.parse(localStorage.getItem("shoppingList"))) {
-        shoppingList = JSON.parse(localStorage.getItem("shoppingList"));
+        shopping_list = JSON.parse(localStorage.getItem("shoppingList"));
         subcart_list.innerHTML = "";
-        for (let i = 0; i < shoppingList.length; i++) {
-            const item = shoppingList[i];
+        for (let i = 0; i < shopping_list.length; i++) {
+            const item = shopping_list[i];
             subcart_list.innerHTML += `
                 <li class="subcart">
                     <div class="subcart">
@@ -25,17 +25,17 @@ function updateCartList() {
             `
         }
         const delete_button = document.querySelectorAll("button#delete-item");
-        for (let i = 0; i < shoppingList.length; i++) {
-            const item = shoppingList[i];
+        for (let i = 0; i < shopping_list.length; i++) {
+            const item = shopping_list[i];
             delete_button[i].addEventListener("click", function() {
-                shoppingList.splice(i,1);
-                quantity.innerHTML = shoppingList.length;
+                shopping_list.splice(i,1);
+                cart_quantity.innerHTML = shopping_list.length;
                 updateLocal();
                 updateCartList();
             })
         }  
     } 
-    if (shoppingList.length == 0) {
+    if (shopping_list.length == 0) {
         subcart_list.innerHTML += `
             <li class="empty-cart">
                 Giỏ hàng của bạn đang trống
