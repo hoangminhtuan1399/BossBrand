@@ -66,10 +66,11 @@
                           <a href="#contact">Liên hệ</a>
                       </li>
                       <li class="navbar-item">
-                          <a href="#"><i class='bx bx-package'></i> Tra cứu đơn hàng</a>
+                          <a href="./search-order.html"><i class='bx bx-package'></i> Tra cứu đơn hàng</a>
                       </li>
                       <li class="navbar-item cart">
-                          <a href="payment.html"><i class="bx bxs-shopping-bag"></i> Giỏ hàng <span id="quantity">0</span></a>
+                        <a href="payment.html"><i class="bx bxs-shopping-bag"></i> Giỏ hàng <span id="quantity">0</span></a>
+                        <ul class="subcart"></ul>
                       </li>
                   </ul>
               </div>
@@ -82,9 +83,9 @@
           <div class="filter-sort">
             <select name="filter" id="filter" class="func">
               <option value="" selected="" disabled="" hidden="">Bộ lọc</option>
-              <option value="1">Dưới 300 nghìn</option>
-              <option value="2">Từ 300 - 400 nghìn</option>
-              <option value="3">Trên 400 nghìn</option>
+              <option value="1">Dưới 300.000 VND</option>
+              <option value="2">300.000 VND - 400.000 VND</option>
+              <option value="3">Trên 400.000 VND</option>
               <option value="4">Tất cả</option>
             </select>
 
@@ -188,5 +189,6 @@
 </div>
     <script src="./assets/database/products.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script src="/assets/js/hover-cart.js"></script>
 </body>
 </html>
