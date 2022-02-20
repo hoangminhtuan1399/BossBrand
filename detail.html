@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,6 +17,7 @@
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/detail.css" />
 </head>
+
 <body>
     <div id="main">
         <header id="header">
@@ -24,23 +26,15 @@
                     <div class="left_header">
                         <div class="logo">
                             <a href="index.html">
-                            <img src="./assets/img/logo.png" alt="">
+                                <img src="./assets/img/logo.png" alt="">
                             </a>
                         </div>
                         <div class="simple-search">
                             <div class="search">
-                                <input type="text" class="search-input" placeholder="Tìm kiếm sản phẩm"/>
+                                <input type="text" class="search-input" placeholder="Tìm kiếm sản phẩm" />
                                 <button class="search-btn"><i class='bx bx-search-alt-2'></i></button>
                             </div>
-                            <ul class="search-list">
-                                <li class="search-item"><a href="#" target="_blank">
-                                    <div class="search-item__img"><img src="./assets/img/hoodies/hoodie1.jpg" alt="" style="width: 100%;"></div>
-                                    <div class="search-item__text">
-                                        <p class="item-name">Hoodie 1</p>
-                                        <p class="item-price">350.000 VND</p>
-                                    </div>
-                                </a></li>
-                            </ul>
+                            <ul class="search-list"></ul>
                         </div>
                     </div>
 
@@ -48,12 +42,13 @@
                         <ul>
                             <li class="navbar-item"><a href="index.html">Trang chủ</a></li>
                             <li class="navbar-item"><a href="#">Sản phẩm <i class='bx bx-chevron-down'></i></a>
-                            <ul class="subnav">
-                                <li class="subnav-item"><a href="product.html?category=t-shirt">T-Shirt</a></li>
-                                <li class="subnav-item"><a href="product.html?category=sweater">Sweater</a></li>
-                                <li class="subnav-item"><a href="product.html?category=hoodie">Hoodie</a></li>
-                            </ul></li>
-                            <li class="navbar-item"><a href="#contact">Liên hệ</a></li>
+                                <ul class="subnav">
+                                    <li class="subnav-item"><a href="product.html?category=t-shirt">T-Shirt</a></li>
+                                    <li class="subnav-item"><a href="product.html?category=sweater">Sweater</a></li>
+                                    <li class="subnav-item"><a href="product.html?category=hoodie">Hoodie</a></li>
+                                </ul>
+                            </li>
+                            <li class="navbar-item"><a href="#infor">Liên hệ</a></li>
                             <li class="navbar-item">
                                 <a href="./search-order.html"><i class='bx bx-package'></i> Tra cứu đơn hàng</a>
                             </li>
@@ -70,7 +65,28 @@
         <div id="container">
             <div class="grid">
                 <div class="product_container">
-                    
+
+                </div>
+            </div>
+        </div>
+
+        <div class="noti-wrapper">
+            <div class="overlay"></div>
+            <div id="modal-container">
+                <div id="success-box">
+                  <div class="face">
+                    <div class="eye"></div>
+                    <div class="eye right"></div>
+                    <div class="mouth happy"></div>
+                  </div>
+                  <div class="shadow scale"></div>
+                  <div class="message">
+                    <h1 class="alert">Success!</h1>
+                    <a href="./payment.html">Xem giỏ hàng</a>
+                  </div>
+                  <a href="./index.html" class="button-box">
+                    <h1 class="green">Tiếp tục mua</h1>
+                  </a>
                 </div>
             </div>
         </div>
@@ -86,5 +102,7 @@
     <script src="./assets/js/detail.js"></script>
     <script src="./assets/js/addtocart.js"></script>
     <script src="/assets/js/hover-cart.js"></script>
+    <script src="./assets/js/search.js"></script>
 </body>
+
 </html>

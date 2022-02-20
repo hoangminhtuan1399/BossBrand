@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,6 +17,7 @@
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/search-order.css" />
 </head>
+
 <body>
     <div id="main">
         <header id="header">
@@ -24,30 +26,22 @@
                     <div class="left_header">
                         <div class="logo">
                             <a href="index.html">
-                            <img src="./assets/img/logo.png" alt="">
+                                <img src="./assets/img/logo.png" alt="">
                             </a>
                         </div>
                         <div class="simple-search">
                             <div class="search">
-                                <input type="text" class="search-input" placeholder="Tìm kiếm sản phẩm"/>
+                                <input type="text" class="search-input" placeholder="Tìm kiếm sản phẩm" />
                                 <button class="search-btn"><i class='bx bx-search-alt-2'></i></button>
                             </div>
-                            <ul class="search-list">
-                                <li class="search-item"><a href="#" target="_blank">
-                                    <div class="search-item__img"><img src="./assets/img/hoodies/hoodie1.jpg" alt="" style="width: 100%;"></div>
-                                    <div class="search-item__text">
-                                        <p class="item-name">Hoodie 1</p>
-                                        <p class="item-price">350.000 VND</p>
-                                    </div>
-                                </a></li>
-                            </ul>
+                            <ul class="search-list"></ul>
                         </div>
                     </div>
 
                     <div class="navbar">
                         <ul>
                             <li class="navbar-item">
-                                <a href="#">Trang chủ</a>
+                                <a href="index.html">Trang chủ</a>
                             </li>
                             <li class="navbar-item">
                                 <a href="#">Sản phẩm
@@ -65,11 +59,11 @@
                                 </ul>
                             </li>
                             <li class="navbar-item">
-                                <a href="#contact">Liên hệ</a>
+                                <a href="#infor">Liên hệ</a>
                             </li>
                             <li class="navbar-item cart">
                                 <a href="payment.html"><i class="bx bxs-shopping-bag"></i> Giỏ hàng <span id="quantity">0</span></a>
-                                <ul class="supcart"></ul>
+                                <ul class="subcart"></ul>
                             </li>
                         </ul>
                     </div>
@@ -82,90 +76,27 @@
                 <div class="content_heading initial">
                     <h1>thông tin đơn hàng</h1>
                     <div class="order-input">
-                        <input required type="text" placeholder="Mã đơn hàng"/>
-                        <button>Tra cứu đơn hàng</button>
+                        <input id="order-code" required type="text" placeholder="Mã đơn hàng" />
+                        <button id="order-btn">Tra cứu đơn hàng</button>
                     </div>
+                    <p class="error"></p>
                 </div>
 
                 <div class="empty">
-                    <p>Chúng tôi không tìm thấy đơn hàng của bạn. Mã đơn hàng không hợp lệ hoặc đã hết hạn. Vui lòng kiểm tra lại mã đơn hàng bạn đã nhập.</p>
-                    <img src="./assets/img/empty-cart.png" alt="">
+
                 </div>
 
                 <div class="correct">
-                    <div class="progress">
-                        <h3>trạng thái đơn hàng <span>abcxyz</span></h3>
-                        <div class="order-status">
-                            <div class="step active"><p>Đặt hàng thành công</p></div>
-                            <div class="step active"><p>Chuyển qua giao nhận</p></div>
-                            <div class="step"><p>đang giao hàng</p></div>
-                            <div class="step"><p>giao hàng thành công</p></div>
-                        </div>
-    
-                        <div class="sub-status">
-                            <p>Thời gian xử lý đơn hàng có thể từ 1-2 ngày làm việc. Vui lòng gọi đến hotline 0963 429 749 (trong giờ hành chính) nếu bạn muốn thay đổi thông tin đơn hàng trước khi đơn hàng của bạn được CHUYỂN QUA GIAO NHẬN.</p>
-                            <p>Đơn hàng của bạn đã được đóng gói và chuyển cho đơn vị vận chuyển.</p>
-                            <p>Thời gian giao hàng tuỳ thuộc vào địa điểm và phương thức giao hàng bạn đã chọn.</p>
-                            <p>Hãy tin rắng chúng tôi luôn cố gắng để hàng đến tay bạn sớm nhất!</p>
-                        </div>
-                    </div>
 
-                    <div class="box">
-                        <div class="user">
-                            <h3>thông tin khách hàng</h3>
-                            <p>Họ tên: <span id="user-name">Nguyễn Văn A</span></p>
-                            <p>Điện thoại: <span id="user-tel">0123456789</span></p>
-                            <p>Email: <span id="user-mail">abc@gmail.com</span></p>
-                            <p>Địa chỉ: <span id="user-address">86 Lê Trọng Tấn</span></p>
-                            <p>Phường/xã: <span id="user-ward">Phường Khương Mai</span></p>
-                            <p>Quận/huyện: <span id="user-district">Quận Thanh Xuân</span></p>
-                            <p>Thành phố/tỉnh: <span id="user-province">Hà Nội</span></p>
-                        </div>
-
-                        <div class="delivery">
-                            <h3>Thanh toán</h3>
-                            <div class="delivery-row">
-                                <p class="title">Tạm tính:</p>
-                                <p class="price">0 VND</p>
-                            </div>
-                            <div class="delivery-row">
-                                <p class="title">Phí vận chuyển:</p>
-                                <p class="price">0 VND</p>
-                            </div>
-                            <div class="delivery-row">
-                                <p class="title">Giảm giá:</p>
-                                <p class="price">0 VND</p>
-                            </div>
-                            <div class="total delivery-row">
-                                <p class="total-title">Tổng thanh toán:</p>
-                                <p class="total-price">0 VND</p>
-                            </div>
-                            <a href="./index.html">Quay lại trang chủ</a>
-                        </div>
-                    </div>
-
-                    <div class="box">
-                        <h3>Chi tiết đơn hàng</h3>
-                        <div class="product">
-                            <div class="product-wrapper">
-                                <div class="product-img">
-                                    <img src="./assets/img/sweaters/sweater6.jpg" alt="" style="width: 100%">
-                                </div>
-    
-                                <div class="product-info">
-                                    <h4>CIAO Easy Camo Sweatshirt</h4>
-                                    <p class="product-text">Giá: <span>540.000 VND</span></p>
-                                    <p class="product-text">Size: <span>L</span></p>
-                                    <p class="product-text">Số lượng: <span>1</span></p>
-                                </div>
-                            </div>
-
-                            <p class="product-price">540.000 VND</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/database/products.js"></script>
+    <script src="./assets/js/search-order.js"></script>
+    <script src="./assets/js/hover-cart.js"></script>
 </body>
+
 </html>

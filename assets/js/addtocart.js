@@ -4,6 +4,7 @@ const size = document.querySelector("select#size");
 const addtocart = document.querySelector("button.button-effect");
 const productName = document.querySelector("h1").innerText;
 const image = document.querySelector("img.image").getAttribute("src");
+const modal = document.querySelector('.noti-wrapper');
 //test
 // console.log(typeof(image));
 //Tạo danh sách giỏ hàng
@@ -15,6 +16,7 @@ if (JSON.parse(localStorage.getItem("shoppingList"))) {
 document.querySelector("span#quantity").innerText = shoppingList.length;
 //Chốt đơn
 addtocart.addEventListener("click", function(event){
+    modal.style.display = 'block';
     let find = false;
     for (let i = 0; i < shoppingList.length; i++) {
         if (shoppingList[i].name == productName) {
