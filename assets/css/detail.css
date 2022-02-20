@@ -211,7 +211,7 @@ input[type="number"]::-webkit-outer-spin-button {
     }
     
     h1.green {
-      color: rgb(141, 199, 159);
+      color: rgb(233,96,117);
       font-size: 1.4rem;
       text-align: center;
     }
@@ -221,10 +221,33 @@ input[type="number"]::-webkit-outer-spin-button {
       width: 35%;
       height: 100%;
       left: 12%;
-      background: linear-gradient(to bottom right, #B0DB7D 40%, #99DBB4 100%);
+      background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
       border-radius: 20px;
       box-shadow: 5px 5px 20px rgba(#CBCDD3, 10%);
       perspective: 40px;
+    }
+
+    .dot {
+      width: 16px;
+      height: 16px;
+      background: #FCFCFC;
+      border-radius: 50%;
+      position: absolute;
+      top: 5%;
+      right: 6%;
+      cursor: pointer;
+      padding: 1px 0 0 1px;
+    }
+
+    .dot:hover {
+      background: #c9c9c9;
+    }
+
+    .dot > p {
+      font-weight: bold;
+      /* transform: translateY(1.6px); */
+      font-size: 1.2rem;
+      color: rgb(233,96,117);
     }
   
     .face {

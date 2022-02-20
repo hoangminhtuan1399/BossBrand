@@ -65,14 +65,15 @@
                             <a href="./search-order.html"><i class='bx bx-package'></i> Tra cứu đơn hàng</a>
                         </li>
                         <li class="navbar-item cart">
-                            <a href="payment.html"><i class="bx bxs-shopping-bag"></i> Giỏ hàng <span
-                                    id="quantity">0</span></a>
+                            <a href="payment.html"><i class="bx bxs-shopping-bag"></i> Giỏ hàng <span id="quantity">0</span></a>
+                            <ul class="subcart"></ul>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </header>
+
     <div class="main-content grid">
         <div class="main_heading">
             <h2></h2>
@@ -83,66 +84,41 @@
         </div>
         <div class="store"></div>
     </div>
-    <div id="contact">
-        <div class="grid">
-            <div class="contact-form">
-                <h3>Thông tin tư vấn</h3>
-                <form>
-                    <div class="row">
-                        <div class="col-25">
-                            <label for="fname">Họ tên</label>
-                        </div>
-                        <div class="col-75">
-                            <input type="text" id="fname" name="fullname" required>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-25">
-                            <label for="address">Địa chỉ</label>
-                        </div>
-                        <div class="col-75">
-                            <input type="text" id="address" name="address" required>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-25">
-                            <label for="phone-num">Số điện thoại</label>
-                        </div>
-                        <div class="col-75">
-                            <input type="number" id="phone-num" name="phone-num" required>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-25">
-                            <label for="email">Email</label>
-                        </div>
-                        <div class="col-75">
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <input type="submit" value="Submit">
-                    </div>
-                </form>
+
+    <div id="infor">
+        <div class="grid" id="infor-container">
+            <div id="about">
+                <h4>About us</h4>
+                <p>BOSS BRAND - Make you an energic Boss</p>
+                <p><i class='bx bxs-map'></i> Số 1 Tôn Thất Tùng, Đống Đa, Hà Nội</p>
+                <p><i class='bx bx-envelope'></i> bossbrand@gmail.com</p>
+                <p><i class='bx bx-phone-call'></i> 0978654321</p>
             </div>
-            <div class="social-network">
+            <div id="information">
+                <h4>Thông tin</h4>
+                <p><a href="ban-hang.html">Chính sách bán hàng</a></p>
+                <p><a href="doi-tra.html">Chính sách đổi trả</a></p>
+                <p><a href="bao-mat.html">Chính sách bảo mật</a></p>
+                <p><a href="chon-size.html">Cách chọn size áo</a></p>
+            </div>
+            <div id="social">
+                <h4 style="text-align: center;">Connect with us</h4>
                 <ul class="social">
                     <li class="social-item social-item--facebook">
-                        <a href="https://www.facebook.com/" target="_blank"><i class='bx bxl-facebook-square'></i></a>
+                        <a href="https://www.facebook.com/" target="_blank"><i class="bx bxl-facebook-square"></i></a>
                     </li>
                     <li class="social-item social-item--twitter">
-                        <a href="https://twitter.com/" target="_blank"><i class='bx bxl-twitter'></i></a>
+                        <a href="https://twitter.com/" target="_blank"><i class="bx bxl-twitter"></i></a>
                     </li>
                     <li class="social-item social-item--telegram">
-                        <a href="https://web.telegram.org/" target="_blank"><i class='bx bxl-telegram'></i></a>
+                        <a href="https://web.telegram.org/" target="_blank"><i class="bx bxl-telegram"></i></a>
                     </li>
                     <li class="social-item social-item--instagram">
-                        <a href="https://www.instagram.com/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="bx bxl-instagram"></i></a>
                     </li>
                 </ul>
             </div>
-        </div>
+        </div>       
     </div>
 
     <footer id="footer">
@@ -154,6 +130,7 @@
     <script src="./assets/database/products.js"></script>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/search.js"></script>
+    <script src="./assets/js/hover-cart.js"></script>
 </body>
 
 </html>

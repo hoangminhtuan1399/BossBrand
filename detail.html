@@ -52,7 +52,10 @@
                             <li class="navbar-item">
                                 <a href="./search-order.html"><i class='bx bx-package'></i> Tra cứu đơn hàng</a>
                             </li>
-                            <li class="navbar-item cart"><a href="payment.html"><i class='bx bxs-shopping-bag'></i> Giỏ hàng <span id="quantity">0</span></a></li>
+                            <li class="navbar-item cart">
+                                <a href="payment.html"><i class="bx bxs-shopping-bag"></i> Giỏ hàng <span id="quantity">0</span></a>
+                                <ul class="subcart"></ul>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -71,6 +74,7 @@
             <div class="overlay"></div>
             <div id="modal-container">
                 <div id="success-box">
+                  <div class="dot"><p><i class='bx bx-x'></i></p></div>
                   <div class="face">
                     <div class="eye"></div>
                     <div class="eye right"></div>
@@ -88,6 +92,42 @@
             </div>
         </div>
 
+        <div id="infor">
+            <div class="grid" id="infor-container">
+                <div id="about">
+                    <h4>About us</h4>
+                    <p>BOSS BRAND - Make you an energic Boss</p>
+                    <p><i class='bx bxs-map'></i> Số 1 Tôn Thất Tùng, Đống Đa, Hà Nội</p>
+                    <p><i class='bx bx-envelope'></i> bossbrand@gmail.com</p>
+                    <p><i class='bx bx-phone-call'></i> 0978654321</p>
+                </div>
+                <div id="information">
+                    <h4>Thông tin</h4>
+                    <p><a href="ban-hang.html">Chính sách bán hàng</a></p>
+                    <p><a href="doi-tra.html">Chính sách đổi trả</a></p>
+                    <p><a href="bao-mat.html">Chính sách bảo mật</a></p>
+                    <p><a href="chon-size.html">Cách chọn size áo</a></p>
+                </div>
+                <div id="social">
+                    <h4 style="text-align: center;">Connect with us</h4>
+                    <ul class="social">
+                        <li class="social-item social-item--facebook">
+                            <a href="https://www.facebook.com/" target="_blank"><i class="bx bxl-facebook-square"></i></a>
+                        </li>
+                        <li class="social-item social-item--twitter">
+                            <a href="https://twitter.com/" target="_blank"><i class="bx bxl-twitter"></i></a>
+                        </li>
+                        <li class="social-item social-item--telegram">
+                            <a href="https://web.telegram.org/" target="_blank"><i class="bx bxl-telegram"></i></a>
+                        </li>
+                        <li class="social-item social-item--instagram">
+                            <a href="https://www.instagram.com/" target="_blank"><i class="bx bxl-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>       
+        </div>
+
         <footer id="footer">
             <div class="grid">
                 <p>© Bản quyền thuộc về BOSS BRAND</p>
@@ -99,6 +139,7 @@
     <script src="./assets/js/detail.js"></script>
     <script src="./assets/js/addtocart.js"></script>
     <script src="./assets/js/search.js"></script>
+    <script src="./assets/js/hover-cart.js"></script>
 </body>
 
 </html>
