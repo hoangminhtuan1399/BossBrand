@@ -4,6 +4,7 @@ const discountWrapper = document.querySelector('.discount-wrapper');
 const discountCode = document.querySelector('.discount-code');
 const promotionInput = document.querySelector('.promotion-form-input');
 const promotionBtn = document.querySelector('.promotion-form-button');
+const discountPrice = document.querySelector("p.discount");
 let shoppingList = [];
 
 if (JSON.parse(localStorage.getItem('shoppingList'))) {
@@ -13,11 +14,51 @@ if (JSON.parse(localStorage.getItem('shoppingList'))) {
 const tamTinh = document.querySelector('p.price');
 const totalPrice = document.querySelector('p.total_price');
 const format = new Intl.NumberFormat('it-IT');
+
 updateShoppingList();
 updatePrice();
+updateQuantity();
+
+function updateQuantity() {
+    let total = 0;
+    for (let i = 0; i < shoppingList.length; i++) {
+        total += shoppingList[i].quantity * shoppingList[i].unitPrice;
+    }
+    let total_quantity = 0;
+    for (let i = 0; i < shoppingList.length; i++) {
+        const item = shoppingList[i];
+        total_quantity += parseInt(item.quantity);
+    }
+    if (total_quantity < 2) {
+        discountWrapper.innerHTML = '';
+    } else if (total_quantity < 5) {
+        discountWrapper.innerHTML = `
+        <p>Bạn đủ điều kiện sử dụng mã <span class="discount-code">mua2giam5%</span> : giảm 5% giá
+        trị tổng đơn hàng</p>
+        `
+    } else {
+        discountWrapper.innerHTML = `
+        <p>Bạn đủ điều kiện sử dụng mã <span class="discount-code">mua5giam10%</span> : giảm 10% giá
+        trị tổng đơn hàng</p>
+        `
+    }
+    discountPrice.innerHTML = `0 VND`;
+    promotionBtn.addEventListener("click", function() {
+        for (const item of voucher) {
+            if (promotionInput.value == item.name) {
+                let discountMoney = item.condition(total_quantity, total);
+                discountPrice.innerHTML = `${format.format(discountMoney)} VND`;
+                totalPrice.innerHTML = `${format.format(total-discountMoney)} VND`
+            }          
+        }
+    })
+    console.log(total_quantity);
+}
+
 function updateLocal() {
     localStorage.setItem('shoppingList', JSON.stringify(shoppingList));
 }
+
 function updatePrice() {
     let total = 0;
     for (let i = 0; i < shoppingList.length; i++) {
@@ -26,6 +67,7 @@ function updatePrice() {
     tamTinh.innerHTML = `${format.format(total)} VND`;
     totalPrice.innerHTML = `${format.format(total)} VND`;
 }
+
 function updateShoppingList() {
     rightCol.innerHTML = '';
     for (let i = 0; i < shoppingList.length; i++) {
@@ -59,12 +101,14 @@ function updateShoppingList() {
             </div>
         `;
     }
+    
     const add = document.querySelectorAll('.add');
     const minus = document.querySelectorAll('.minus');
     const number = document.querySelectorAll('.number');
     const product_price = document.querySelectorAll('span.product_price');
     const deleteButton = document.querySelectorAll('i.material-icons');
     const product_container = document.querySelectorAll('.product');
+
     for (const item of shoppingList) {
         let i = shoppingList.indexOf(item);
         add[i].onclick = () => {
@@ -74,6 +118,7 @@ function updateShoppingList() {
                 item.unitPrice * item.quantity
             )} VND`;
             updatePrice();
+            updateQuantity();
             updateLocal();
         };
 
@@ -87,6 +132,7 @@ function updateShoppingList() {
                 item.unitPrice * item.quantity
             )} VND `;
             updatePrice();
+            updateQuantity();
             updateLocal();
         };
 
@@ -95,6 +141,7 @@ function updateShoppingList() {
             updateShoppingList();
             updateLocal();
             updatePrice();
+            updateQuantity();
         });
     }
 }
@@ -112,7 +159,7 @@ form.addEventListener('submit', function (event) {
             <div class="box-button"><a href="index.html"><button>Quay về trang chủ</button></a></div>
         `;
         box.style.display = 'flex';
-        localStorage.clear();
+        localStorage.removeItem("shoppingList");
     } else {
         box.innerHTML = `
             <div class="box-title"><h2>Đặt hàng thất bại!</h2></div>
