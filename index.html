@@ -27,30 +27,22 @@
                     <div class="left_header">
                         <div class="logo">
                             <a href="index.html">
-                            <img src="./assets/img/logo.png" alt="">
+                                <img src="./assets/img/logo.png" alt="">
                             </a>
                         </div>
                         <div class="simple-search">
                             <div class="search">
-                                <input type="text" class="search-input" placeholder="Tìm kiếm sản phẩm"/>
+                                <input type="text" class="search-input" placeholder="Tìm kiếm sản phẩm" />
                                 <button class="search-btn"><i class='bx bx-search-alt-2'></i></button>
                             </div>
-                            <ul class="search-list">
-                                <li class="search-item"><a href="#" target="_blank">
-                                    <div class="search-item__img"><img src="./assets/img/hoodies/hoodie1.jpg" alt="" style="width: 100%;"></div>
-                                    <div class="search-item__text">
-                                        <p class="item-name">Hoodie 1</p>
-                                        <p class="item-price">350.000 VND</p>
-                                    </div>
-                                </a></li>
-                            </ul>
+                            <ul class="search-list"></ul>
                         </div>
                     </div>
 
                     <div class="navbar">
                         <ul>
                             <li class="navbar-item">
-                                <a href="#">Trang chủ</a>
+                                <a href="index.html">Trang chủ</a>
                             </li>
                             <li class="navbar-item">
                                 <a href="#">Sản phẩm
@@ -68,7 +60,7 @@
                                 </ul>
                             </li>
                             <li class="navbar-item">
-                                <a href="#contact">Liên hệ</a>
+                                <a href="#infor">Liên hệ</a>
                             </li>
                             <li class="navbar-item">
                                 <a href="./search-order.html"><i class='bx bx-package'></i> Tra cứu đơn hàng</a>
@@ -95,16 +87,21 @@
         <div id="slider">
             <div class="grid">
                 <div class="slideshow-container">
-                    <div class="mySlides fade"><a href="#tshirt"><img src="./assets/img/t-shirt__slider.jpg" style="width:100%"></a></div>
-                    <div class="mySlides fade"><a href="#sweater"><img src="./assets/img/sweater.jpg" style="width:100%"></a></div>
-                    <div class="mySlides fade"><a href="#hoodie"><img src="./assets/img/hoodie.jpg" style="width:100%"></a></div>
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next" onclick="plusSlides(1)">&#10095;</a> </div>
-                  <br>
-                  <div style="text-align:center"> 
-                  <span class="dot" onclick="currentSlide(1)"></span> 
-                  <span class="dot" onclick="currentSlide(2)"></span> 
-                  <span class="dot" onclick="currentSlide(3)"></span>          
-                  </div>
+                    <div class="mySlides fade"><a href="#tshirt"><img src="./assets/img/t-shirt__slider.jpg"
+                                style="width:100%"></a></div>
+                    <div class="mySlides fade"><a href="#sweater"><img src="./assets/img/sweater.jpg"
+                                style="width:100%"></a></div>
+                    <div class="mySlides fade"><a href="#hoodie"><img src="./assets/img/hoodie.jpg"
+                                style="width:100%"></a></div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next"
+                        onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
             </div>
         </div>
 
@@ -136,55 +133,9 @@
             </div>
         </div>
 
-        <div id="contact">
-            <div class="grid">
-                <div class="contact-form">
-                    <h3>Thông tin tư vấn</h3>
-                    <form>
-                        <div class="row">
-                            <div class="col-25">
-                                <label for="fname">Họ tên</label>
-                            </div>
-                            <div class="col-75">
-                                <input type="text" id="fname" name="fullname" required />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-25">
-                                <label for="address">Địa chỉ</label>
-                            </div>
-                            <div class="col-75">
-                                <input type="text" id="address" name="address" required />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-25">
-                                <label for="phone-num">Số điện thoại</label>
-                            </div>
-                            <div class="col-75">
-                                <input type="number" id="phone-num" name="phone-num" required />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-25">
-                                <label for="email">Email</label>
-                            </div>
-                            <div class="col-75">
-                                <input type="email" id="email" name="email"/>
-                            </div>
-                        </div>
-                        <br />
-                        <div class="row">
-                            <input type="submit" value="Submit" />
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
         <!-- footer tính từ đây nhé do tôi lười =)) -->
 
-        <div class="infor">
+        <div class="infor" id="infor">
             <div class="grid" id="infor-container">
                 <div id="about">
                     <h4>About us</h4>
@@ -223,6 +174,39 @@
             
         </div>
 
+        <div class="hotline-phone-ring">
+            <div class="hotline-phone-ring-circle"></div>
+            <div class="hotline-phone-ring-circle-fill"></div>
+            <div class="hotline-phone-ring-img-circle">
+                <i style="color:#fff;font-size: 3rem;" class="bx bxl-messenger"></i>
+            </div>
+        </div>
+
+        <div class="chat">
+            <div class="chat-heading">
+                <div class="admin">
+                    <div class="admin-ava">
+                        <img src="./assets/img/admin.png" alt="" style="width: 100%">
+                    </div>
+                    <div class="admin-txt">
+                        <p class="admin-name">BossBrand</p>
+                        <p class="admin-title">Chúng tôi sẵn sàng trợ giúp</p>
+                    </div>
+                </div>
+                <div class="close">
+                    <i class='bx bx-x'></i>
+                </div>
+            </div>
+
+            <div class="chat-content">
+                <input type="text" name="" id="" class="user-input" placeholder="Họ tên" required>
+                <input type="number" name="" id="" class="user-input" placeholder="Số điện thoại" required>
+                <textarea rows="5" type="text" name="" id="" class="user-input" placeholder="Lời nhắn"
+                    required></textarea>
+                <input type="submit" value="Bắt đầu trò chuyện">
+            </div>
+        </div>
+
         <footer id="footer">
             <div class="grid">
                 <p>© Bản quyền thuộc về BOSS BRAND</p>
@@ -230,11 +214,12 @@
         </footer>
         <!-- Hết footer -->
     </div>
-    
+
     <script src="./assets/database/products.js"></script>
     <script src="./assets/js/render.js"></script>
     <script src="./assets/js/index.js"></script>
     <script src="./assets/js/hover-cart.js"></script>
+    <script src="./assets/js/search.js"></script>
 </body>
 
 </html>

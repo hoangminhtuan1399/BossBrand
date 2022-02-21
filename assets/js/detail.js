@@ -1,36 +1,41 @@
-if (JSON.parse(localStorage.getItem("shoppingList"))) {
-    document.querySelector("span#quantity").innerText = JSON.parse(localStorage.getItem("shoppingList")).length;
+if (JSON.parse(localStorage.getItem('shoppingList'))) {
+    document.querySelector('span#quantity').innerText = JSON.parse(
+        localStorage.getItem('shoppingList')
+    ).length;
 } else {
-    document.querySelector("span#quantity").innerText = 0;
+    document.querySelector('span#quantity').innerText = 0;
 }
 const urlSearchParams = new URLSearchParams(window.location.search);
 const params = Object.fromEntries(urlSearchParams.entries());
 
-const detailEl = document.querySelector('.product_container')
-const titleEl = document.querySelector('title')
+const detailEl = document.querySelector('.product_container');
+const titleEl = document.querySelector('title');
 
-let detailHtml = ''
-let titleHtml = ''
+let detailHtml = '';
+let titleHtml = '';
 
 for (const item of products) {
     if (params.name === item.name) {
         detailHtml = `
             <div class="product_img">
-            <img src="${
-                item.img
-            }" alt="" class="image" style="width: 100%">
+            <img src="${item.img}" alt="" class="image" style="width: 100%">
             </div>
     
             <div class="product_info">
             <h1>${item.name}</h1>
             <div class="status">
-                <p class="cate">Thể loại: <a href="product.html?category=${item.category}">${item.category.charAt(0).toUpperCase() + item.category.slice(1)}</a></p>
+                <p class="cate">Thể loại: <a href="product.html?category=${
+                    item.category
+                }">${
+            item.category.charAt(0).toUpperCase() + item.category.slice(1)
+        }</a></p>
                 <p class="line">|</p>
                 <p class="stt">Tình trạng: <span>Còn hàng</span></p>
             </div>
-            <h2>${new Intl.NumberFormat(
-                'it-IT', {style : 'currency', currency : 'VND'}
-            ).format(item.price)}</h2>
+            <h2>${new Intl.NumberFormat('it-IT', {
+                style: 'currency',
+                currency: 'VND'
+            }).format(item.price)}</h2>
             <form action="" class="order">
                 <div class="product_quan">
                     <label for="quantity">Số lượng:</label>
@@ -59,24 +64,24 @@ for (const item of products) {
             </div>
         `;
 
-        titleHtml = `${item.name}`
+        titleHtml = `${item.name}`;
     }
 }
 
 detailEl.innerHTML = detailHtml;
 titleEl.innerHTML = titleHtml;
 
-let add = document.querySelector(".add"),
-    minus = document.querySelector(".minus"),
-    number = document.querySelector(".number")
+let add = document.querySelector('.add'),
+    minus = document.querySelector('.minus'),
+    number = document.querySelector('.number');
 
 add.onclick = () => {
-    number.value = parseInt(number.value) + 1
-}
+    number.value = parseInt(number.value) + 1;
+};
 
 minus.onclick = () => {
-    number.value = parseInt(number.value) - 1
-    if(number.value < 1) {
-        number.value = 1
+    number.value = parseInt(number.value) - 1;
+    if (number.value < 1) {
+        number.value = 1;
     }
-}
+};

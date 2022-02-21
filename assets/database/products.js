@@ -26,7 +26,7 @@ const products = [
     {
         id: 'tshirt4',
         name: 'Ananas Graphic - Black',
-        price: 320000,
+        price: 420000,
         img: './assets/img/t-shirts/tshirt4.jpg',
         category: 't-shirt',
         title: 'T-Shirt',

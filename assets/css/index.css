@@ -116,6 +116,7 @@ h2 {
     height: 369px;
     overflow: hidden;
     border-radius: 20px;
+    box-shadow: 0 0 0 0.5px #d9d9d9;
 }
 
 .product__img {
@@ -294,13 +295,13 @@ h3 {
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
+input[type='number'] {
+    -moz-appearance: textfield;
 }
 
 .col-25 {

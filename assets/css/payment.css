@@ -139,7 +139,7 @@ input[type='radio']:checked ~ label {
     width: 100%;
     box-shadow: 0 0 0 1px #d9d9d9;
     border-radius: 4px;
-    padding: 12px 20px;
+    padding: 12px 10px;
     justify-content: space-between;
     margin: 0 0 10px 0;
 }
@@ -157,6 +157,7 @@ input[type='radio']:checked ~ label {
     border: 1px solid #a7a8b0;
     color: #a7a8b0;
     font-size: 1.4rem;
+    width: 82px;
 }
 .quantity-input > * {
     padding: 4px 6px;
@@ -274,7 +275,7 @@ h3 {
 }
 
 .price,
-.shipping-price {
+.shipping-price, .discount {
     font-size: 1.6rem;
     color: var(--text-color);
 }
@@ -335,10 +336,9 @@ i.material-icons:hover {
     border-radius: 4px;
     border: 1px solid darkgray;
     background-color: var(--bg-color);
+    padding: 116px 0;
 }
-.box-title {
-    padding-top: 5%;
-}
+
 .box-title > h2 {
     font-size: 3rem;
 }
@@ -347,6 +347,24 @@ i.material-icons:hover {
     font-size: 1.8rem;
     color: var(--nav-hover);
 }
-.box-button {
-    padding-bottom: 2%;
+
+#code {
+    font-size: 2rem;
+    font-weight: 900;
+    color: rgb(255,0,0);
+    font-style: italic;
+}
+
+.discount-wrapper > p {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-top: 16px;
+}
+
+.discount-code {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-style: italic;
 }

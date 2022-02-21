@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,143 +10,81 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.0.1/css/boxicons.min.css">
     <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/style.css"/>
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <script src="https://kit.fontawesome.com/9a6d25af5b.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header id="header">
-      <div class="grid">
-          <div class="header__container">
-              <div class="left_header">
-                  <div class="logo">
-                      <a href="index.html">
-                      <img src="./assets/img/logo.png" alt="">
-                      </a>
-                  </div>
-                  <div class="simple-search">
-                      <div class="search">
-                          <input type="text" class="search-input" placeholder="Tìm kiếm sản phẩm"/>
-                          <button class="search-btn"><i class='bx bx-search-alt-2'></i></button>
-                      </div>
-                      <ul class="search-list">
-                          <li class="search-item"><a href="#" target="_blank">
-                              <div class="search-item__img"><img src="./assets/img/hoodies/hoodie1.jpg" alt="" style="width: 100%;"></div>
-                              <div class="search-item__text">
-                                  <p class="item-name">Hoodie 1</p>
-                                  <p class="item-price">350.000 VND</p>
-                              </div>
-                          </a></li>
-                      </ul>
-                  </div>
-              </div>
+        <div class="grid">
+            <div class="header__container">
+                <div class="left_header">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="./assets/img/logo.png" alt="">
+                        </a>
+                    </div>
+                    <div class="simple-search">
+                        <div class="search">
+                            <input type="text" class="search-input" placeholder="Tìm kiếm sản phẩm" />
+                            <button class="search-btn"><i class='bx bx-search-alt-2'></i></button>
+                        </div>
+                        <ul class="search-list"></ul>
+                    </div>
+                </div>
 
-              <div class="navbar">
-                  <ul>
-                      <li class="navbar-item">
-                          <a href="#">Trang chủ</a>
-                      </li>
-                      <li class="navbar-item">
-                          <a href="#">Sản phẩm
-                              <i class="bx bx-chevron-down"></i></a>
-                          <ul class="subnav">
-                              <li class="subnav-item">
-                                  <a href="product.html?category=t-shirt">T-Shirt</a>
-                              </li>
-                              <li class="subnav-item">
-                                  <a href="product.html?category=sweater">Sweater</a>
-                              </li>
-                              <li class="subnav-item">
-                                  <a href="product.html?category=hoodie">Hoodie</a>
-                              </li>
-                          </ul>
-                      </li>
-                      <li class="navbar-item">
-                          <a href="#contact">Liên hệ</a>
-                      </li>
-                      <li class="navbar-item">
-                          <a href="./search-order.html"><i class='bx bx-package'></i> Tra cứu đơn hàng</a>
-                      </li>
-                      <li class="navbar-item cart">
-                        <a href="payment.html"><i class="bx bxs-shopping-bag"></i> Giỏ hàng <span id="quantity">0</span></a>
-                        <ul class="subcart"></ul>
-                      </li>
-                  </ul>
-              </div>
-          </div>
-      </div>
+                <div class="navbar">
+                    <ul>
+                        <li class="navbar-item">
+                            <a href="index.html">Trang chủ</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a href="#">Sản phẩm
+                                <i class="bx bx-chevron-down"></i></a>
+                            <ul class="subnav">
+                                <li class="subnav-item">
+                                    <a href="product.html?category=t-shirt">T-Shirt</a>
+                                </li>
+                                <li class="subnav-item">
+                                    <a href="product.html?category=sweater">Sweater</a>
+                                </li>
+                                <li class="subnav-item">
+                                    <a href="product.html?category=hoodie">Hoodie</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navbar-item">
+                            <a href="#infor">Liên hệ</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a href="./search-order.html"><i class='bx bx-package'></i> Tra cứu đơn hàng</a>
+                        </li>
+                        <li class="navbar-item cart">
+                            <a href="payment.html"><i class="bx bxs-shopping-bag"></i> Giỏ hàng <span
+                                    id="quantity">0</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </header>
     <div class="main-content grid">
         <div class="main_heading">
-          <h2>Ví dụ</h2>
-          <div class="filter-sort">
-            <select name="filter" id="filter" class="func">
-              <option value="" selected="" disabled="" hidden="">Bộ lọc</option>
-              <option value="1">Dưới 300.000 VND</option>
-              <option value="2">300.000 VND - 400.000 VND</option>
-              <option value="3">Trên 400.000 VND</option>
-              <option value="4">Tất cả</option>
-            </select>
-
-            <select name="sort" id="sort" class="func">
-              <option value="" selected="" disabled="" hidden="">Sắp xếp</option>
-              <option value="1">Giá từ cao đến thấp</option>
-              <option value="2">Giá từ thấp đến cao</option>
-            </select>
-          </div>
-        </div>
-        <div class="store">
-            
-        </div>
-    </div>
-    <div id="contact">
-        <div class="grid">
-            <div class="contact-form">
-                <h3>Thông tin tư vấn</h3>
-                <form>
-                    <div class="row">
-                      <div class="col-25">
-                        <label for="fname">Họ tên</label>
-                      </div>
-                      <div class="col-75">
-                        <input type="text" id="fname" name="fullname" required>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-25">
-                        <label for="address">Địa chỉ</label>
-                      </div>
-                      <div class="col-75">
-                        <input type="text" id="address" name="address" required>
-                      </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-25">
-                          <label for="phone-num">Số điện thoại</label>
-                        </div>
-                        <div class="col-75">
-                          <input type="number" id="phone-num" name="phone-num" required>
-                        </div>
-                      </div>
-                    <div class="row">
-                        <div class="col-25">
-                          <label for="email">Email</label>
-                        </div>
-                        <div class="col-75">
-                          <input type="email" id="email" name="email" required>
-                        </div>
-                      </div>
-                    <br>
-                    <div class="row">
-                      <input type="submit" value="Submit">
-                    </div>
-                </form>
+            <h2></h2>
+            <div class="filter-sort">
+                <select name="filter" id="filter" class="func"></select>
+                <select name="sort" id="sort" class="func"></select>
             </div>
         </div>
+        <div class="store"></div>
     </div>
-    <div class="infor">
+    
+    <div class="infor" id="infor">
         <div class="grid" id="infor-container">
             <div id="about">
                 <h4>About us</h4>
@@ -186,9 +125,11 @@
             <p>© Bản quyền thuộc về BOSS BRAND</p>
         </div>
     </footer>
-</div>
+    </div>
     <script src="./assets/database/products.js"></script>
     <script src="./assets/js/script.js"></script>
     <script src="/assets/js/hover-cart.js"></script>
+    <script src="./assets/js/search.js"></script>
 </body>
+
 </html>
