@@ -80,7 +80,7 @@ div.store {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding-left: 12px;
+    padding: 0 24px;
 }
 
 .product__info p {

@@ -5,7 +5,7 @@ searchInput.addEventListener('input', (e) => {
     const search = e.target.value.replace(/\s+/g, ' ').trim().toLowerCase(); // Loại bỏ những khoảng trống thừa khi người dùng nhập
     if (search) {
         const res = products.filter((product) =>
-            product.name.toLowerCase().includes(search) // Lọc ra nhưng kết quả True từ file data
+            product.name.toLowerCase().includes(search) // Lọc ra những kết quả True từ file data
         );
         searchResults.style.display = 'block';
         if (!res[0]) {

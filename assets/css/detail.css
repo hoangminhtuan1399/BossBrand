@@ -211,7 +211,7 @@ input[type="number"]::-webkit-outer-spin-button {
     }
     
     h1.green {
-      color: rgb(233,96,117);
+      color: #99DBB4;
       font-size: 1.4rem;
       text-align: center;
     }
@@ -221,7 +221,7 @@ input[type="number"]::-webkit-outer-spin-button {
       width: 35%;
       height: 100%;
       left: 12%;
-      background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+      background: linear-gradient(to bottom left, #B0DB7D 40%, #99DBB4 100%);
       border-radius: 20px;
       box-shadow: 5px 5px 20px rgba(#CBCDD3, 10%);
       perspective: 40px;

@@ -4,7 +4,9 @@ const discountWrapper = document.querySelector('.discount-wrapper');
 const discountCode = document.querySelector('.discount-code');
 const promotionInput = document.querySelector('.promotion-form-input');
 const promotionBtn = document.querySelector('.promotion-form-button');
+const discountPrice = document.querySelector('p.discount');
 let shoppingList = [];
+let shoppingHis = [];
 
 if (JSON.parse(localStorage.getItem('shoppingList'))) {
     shoppingList = JSON.parse(localStorage.getItem('shoppingList'));
@@ -13,11 +15,58 @@ if (JSON.parse(localStorage.getItem('shoppingList'))) {
 const tamTinh = document.querySelector('p.price');
 const totalPrice = document.querySelector('p.total_price');
 const format = new Intl.NumberFormat('it-IT');
+
 updateShoppingList();
 updatePrice();
+updateQuantity();
+
+function updateQuantity() {
+    let total = 0;
+    for (let i = 0; i < shoppingList.length; i++) {
+        total += shoppingList[i].quantity * shoppingList[i].unitPrice;
+    }
+    let total_quantity = 0;
+    for (let i = 0; i < shoppingList.length; i++) {
+        const item = shoppingList[i];
+        total_quantity += parseInt(item.quantity);
+    }
+    if (total_quantity < 2) {
+        discountWrapper.innerHTML = '';
+    } else if (total_quantity < 5) {
+        discountWrapper.innerHTML = `
+        <p>Bạn đủ điều kiện sử dụng mã <span class="discount-code">mua2giam5%</span> : giảm 5% giá
+        trị tổng đơn hàng</p>
+        `;
+    } else {
+        discountWrapper.innerHTML = `
+        <p>Bạn đủ điều kiện sử dụng mã <span class="discount-code">mua5giam10%</span> : giảm 10% giá
+        trị tổng đơn hàng</p>
+        `;
+    }
+
+    const discount_code = document.querySelector('.discount-code');
+    discount_code.addEventListener('click', () => {
+        promotionInput.value = discount_code.innerText;
+    })
+
+    discountPrice.innerHTML = `0 VND`;
+    promotionBtn.addEventListener('click', function () {
+        for (const item of voucher) {
+            if (promotionInput.value == item.name) {
+                let discountMoney = item.condition(total_quantity, total);
+                discountPrice.innerHTML = `${format.format(discountMoney)} VND`;
+                totalPrice.innerHTML = `${format.format(
+                    total - discountMoney
+                )} VND`;
+            }
+        }
+    });
+}
+
 function updateLocal() {
     localStorage.setItem('shoppingList', JSON.stringify(shoppingList));
 }
+
 function updatePrice() {
     let total = 0;
     for (let i = 0; i < shoppingList.length; i++) {
@@ -26,6 +75,7 @@ function updatePrice() {
     tamTinh.innerHTML = `${format.format(total)} VND`;
     totalPrice.innerHTML = `${format.format(total)} VND`;
 }
+
 function updateShoppingList() {
     rightCol.innerHTML = '';
     for (let i = 0; i < shoppingList.length; i++) {
@@ -59,12 +109,14 @@ function updateShoppingList() {
             </div>
         `;
     }
+
     const add = document.querySelectorAll('.add');
     const minus = document.querySelectorAll('.minus');
     const number = document.querySelectorAll('.number');
     const product_price = document.querySelectorAll('span.product_price');
     const deleteButton = document.querySelectorAll('i.material-icons');
     const product_container = document.querySelectorAll('.product');
+
     for (const item of shoppingList) {
         let i = shoppingList.indexOf(item);
         add[i].onclick = () => {
@@ -74,6 +126,7 @@ function updateShoppingList() {
                 item.unitPrice * item.quantity
             )} VND`;
             updatePrice();
+            updateQuantity();
             updateLocal();
         };
 
@@ -87,6 +140,7 @@ function updateShoppingList() {
                 item.unitPrice * item.quantity
             )} VND `;
             updatePrice();
+            updateQuantity();
             updateLocal();
         };
 
@@ -95,14 +149,41 @@ function updateShoppingList() {
             updateShoppingList();
             updateLocal();
             updatePrice();
+            updateQuantity();
         });
     }
 }
 
 const form = document.querySelector('form.user-info');
 const box = document.querySelector('.box');
+
 box.style.display = 'none';
+
 form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    let province = document.querySelector('select[name="provinces"]').value;
+    let district = document.querySelector('select[name="districts"]').value;
+    let ward = document.querySelector('select[name="wards"]').value;
+
+    const provinceOpts = document.querySelectorAll(
+        'select[name="provinces"] option'
+    );
+    const districtOpts = document.querySelectorAll(
+        'select[name="districts"] option'
+    );
+    const wardOpts = document.querySelectorAll('select[name="wards"] option');
+
+    province = Array.from(provinceOpts).find(
+        (el) => el.value === province
+    ).innerText;
+
+    district = Array.from(districtOpts).find(
+        (el) => el.value === district
+    ).innerText;
+
+    ward = Array.from(wardOpts).find((el) => el.value === ward).innerText;
+
     updateLocal();
     if (JSON.parse(localStorage.getItem('shoppingList')).length > 0) {
         let code = Math.random().toString(36).slice(-8);
@@ -112,16 +193,34 @@ form.addEventListener('submit', function (event) {
             <div class="box-button"><a href="index.html"><button>Quay về trang chủ</button></a></div>
         `;
         box.style.display = 'flex';
-        localStorage.clear();
+        shoppingHis.push({
+            id: code,
+            userdata: {
+                name: document.querySelector('.user-name').value,
+                tel: document.querySelector('.user-tel').value,
+                email: document.querySelector('.user-mail').value,
+                address: document.querySelector('.user-address').value,
+                province,
+                district,
+                ward,
+                discount_price: discountPrice.innerHTML,
+                total_price: totalPrice.innerHTML,
+                temp_price: tamTinh.innerHTML
+            },
+            shoppingdata: shoppingList
+        });
+        localStorage.setItem('shoppingHis', JSON.stringify(shoppingHis));
+        localStorage.removeItem('shoppingList');
+        console.log(shoppingHis);
+        console.log(shoppingList);
     } else {
         box.innerHTML = `
             <div class="box-title"><h2>Đặt hàng thất bại!</h2></div>
             <div class="box-message"><p>Giỏ hàng của bạn đang trống, thêm vào đó ít quần áo đẹp nhé?</p></div>
-            <div class="box-button"><a href="product.html?category=t-shirt"><button>Tiếp tục mua sắm</button></a></div>
+            <div class="box-button"><a href="/"><button>Tiếp tục mua sắm</button></a></div>
         `;
         box.style.display = 'flex';
     }
-    event.preventDefault();
 });
 
 const localPicker = new LocalPicker({
