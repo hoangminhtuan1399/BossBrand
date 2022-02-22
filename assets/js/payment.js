@@ -41,11 +41,19 @@ function updateQuantity() {
         <p>Bạn đủ điều kiện sử dụng mã <span class="discount-code">mua2giam5%</span> : giảm 5% giá
         trị tổng đơn hàng</p>
         `
+        const discount_code = document.querySelector('.discount-code');
+        discount_code.addEventListener('click', () => {
+            promotionInput.value = discount_code.innerText;
+    })
     } else {
         discountWrapper.innerHTML = `
         <p>Bạn đủ điều kiện sử dụng mã <span class="discount-code">mua5giam10%</span> : giảm 10% giá
         trị tổng đơn hàng</p>
         `
+        const discount_code = document.querySelector('.discount-code');
+        discount_code.addEventListener('click', () => {
+            promotionInput.value = discount_code.innerText;
+    })
     }
 
     discountPrice.innerHTML = `0 VND`;
@@ -59,11 +67,6 @@ function updateQuantity() {
         }
     })
 }
-
-const discount_code = document.querySelector('.discount-code');
-    discount_code.addEventListener('click', () => {
-        promotionInput.value = discount_code.innerText;
-    })
 
 function updateLocal() {
     localStorage.setItem('shoppingList', JSON.stringify(shoppingList));
