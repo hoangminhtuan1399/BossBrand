@@ -47,6 +47,12 @@ function updateQuantity() {
         trị tổng đơn hàng</p>
         `
     }
+
+    const discount_code = document.querySelector('.discount-code');
+    discount_code.addEventListener('click', () => {
+        promotionInput.value = discount_code.innerText;
+    })
+
     discountPrice.innerHTML = `0 VND`;
     promotionBtn.addEventListener("click", function() {
         for (const item of voucher) {
