@@ -143,7 +143,9 @@ const render = (e, data) => {
                         )}</p>
                     </div>
                 `
-                )}
+                )
+                .join('')
+            }
             </div>
         `;
     }
