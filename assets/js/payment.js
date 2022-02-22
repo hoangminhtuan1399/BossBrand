@@ -6,9 +6,14 @@ const promotionInput = document.querySelector('.promotion-form-input');
 const promotionBtn = document.querySelector('.promotion-form-button');
 const discountPrice = document.querySelector("p.discount");
 let shoppingList = [];
+let shoppingHis = [];
 
 if (JSON.parse(localStorage.getItem('shoppingList'))) {
     shoppingList = JSON.parse(localStorage.getItem('shoppingList'));
+}
+
+if (JSON.parse(localStorage.getItem('shoppingHis'))) {
+    shoppingHis = JSON.parse(localStorage.getItem('shoppingHis'));
 }
 
 const tamTinh = document.querySelector('p.price');
@@ -52,7 +57,6 @@ function updateQuantity() {
             }          
         }
     })
-    console.log(total_quantity);
 }
 
 function updateLocal() {
@@ -148,8 +152,34 @@ function updateShoppingList() {
 
 const form = document.querySelector('form.user-info');
 const box = document.querySelector('.box');
+
 box.style.display = 'none';
+
 form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    let province = document.querySelector('select[name="provinces"]').value;
+    let district = document.querySelector('select[name="districts"]').value;
+    let ward = document.querySelector('select[name="wards"]').value;
+
+    const provinceOpts = document.querySelectorAll(
+        'select[name="provinces"] option'
+    );
+    const districtOpts = document.querySelectorAll(
+        'select[name="districts"] option'
+    );
+    const wardOpts = document.querySelectorAll('select[name="wards"] option');
+
+    province = Array.from(provinceOpts).find(
+        (el) => el.value === province
+    ).innerText;
+
+    district = Array.from(districtOpts).find(
+        (el) => el.value === district
+    ).innerText;
+
+    ward = Array.from(wardOpts).find((el) => el.value === ward).innerText;
+
     updateLocal();
     if (JSON.parse(localStorage.getItem('shoppingList')).length > 0) {
         let code = Math.random().toString(36).slice(-8);
@@ -159,16 +189,34 @@ form.addEventListener('submit', function (event) {
             <div class="box-button"><a href="index.html"><button>Quay về trang chủ</button></a></div>
         `;
         box.style.display = 'flex';
-        localStorage.removeItem("shoppingList");
+        shoppingHis.push({
+            id: code,
+            userdata: {
+                name: document.querySelector('.user-name').value,
+                tel: document.querySelector('.user-tel').value,
+                email: document.querySelector('.user-mail').value,
+                address: document.querySelector('.user-address').value,
+                province,
+                district,
+                ward,
+                discount_price: discountPrice.innerHTML,
+                total_price: totalPrice.innerHTML,
+                temp_price: tamTinh.innerHTML
+            },
+            shoppingdata: shoppingList
+        });
+        localStorage.setItem('shoppingHis', JSON.stringify(shoppingHis));
+        localStorage.removeItem('shoppingList');
+        console.log(shoppingHis);
+        console.log(shoppingList);
     } else {
         box.innerHTML = `
             <div class="box-title"><h2>Đặt hàng thất bại!</h2></div>
             <div class="box-message"><p>Giỏ hàng của bạn đang trống, thêm vào đó ít quần áo đẹp nhé?</p></div>
-            <div class="box-button"><a href="product.html?category=t-shirt"><button>Tiếp tục mua sắm</button></a></div>
+            <div class="box-button"><a href="/"><button>Tiếp tục mua sắm</button></a></div>
         `;
         box.style.display = 'flex';
     }
-    event.preventDefault();
 });
 
 const localPicker = new LocalPicker({

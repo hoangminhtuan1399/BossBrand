@@ -74,7 +74,7 @@ const products = [
 
     {
         id: 'sweater1',
-        name: 'Ananas Typo Sweatshirt - Bayberry',
+        name: 'Ananas Sweatshirt - Bayberry',
         price: 480000,
         img: './assets/img/sweaters/sweater1.jpg',
         category: 'sweater',
@@ -82,7 +82,7 @@ const products = [
     },
     {
         id: 'sweater2',
-        name: 'Ananas Typo Sweatshirt - Black',
+        name: 'Ananas Sweatshirt - Black',
         price: 360000,
         img: './assets/img/sweaters/sweater2.jpg',
         category: 'sweater',
@@ -90,7 +90,7 @@ const products = [
     },
     {
         id: 'sweater3',
-        name: 'Ananas Typo Sweatshirt - White',
+        name: 'Ananas Sweatshirt - White',
         price: 290000,
         img: './assets/img/sweaters/sweater3.jpg',
         category: 'sweater',
