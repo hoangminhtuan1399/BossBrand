@@ -17,7 +17,7 @@ function updateCartList() {
                         <img src="${item.image}">
                     </div>
                     <div class="subcart">
-                        <span class="subcart">${item.name} - ${item.size}</span>
+                        <span class="subcart">${item.name} - ${item.color}</span>
                         <span class="subcart">${item.unitPrice} VND x ${item.quantity}</span>
                     </div>
                     <button id="delete-item"><b>X</b></button>

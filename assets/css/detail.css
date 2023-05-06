@@ -22,7 +22,7 @@ span {
 
 .product_container {
     width: 100%;
-    height: 78vh;
+    height: 70vh;
     background-color: var(--white-color);
     border-radius: 20px;
     padding: 30px 40px;
@@ -39,7 +39,8 @@ span {
     margin-left: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
+    gap: 20px;
 }
 
 h1 {
@@ -86,10 +87,11 @@ label {
 }
 
 .order {
-    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    gap: 20px;
+    margin-top: 30px;
 }
 
 .quantity-input {

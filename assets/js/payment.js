@@ -94,7 +94,7 @@ function updateShoppingList() {
                     </div>
                     <div class="product_info">
                         <h3>${shoppingList[i].name}</h3>
-                        <p class="size">Size: ${shoppingList[i].size}</p>
+                        <p class="color">Màu: ${shoppingList[i].color}</p>
                         <div class="quantity-input">
                             <div class="minus">
                                 <i class='bx bx-minus'></i>
@@ -194,7 +194,7 @@ form.addEventListener('submit', function (event) {
         let code = Math.random().toString(36).slice(-8);
         box.innerHTML = `
             <div class="box-title"><h2>Đặt hàng thành công!</h2></div>
-            <div class="box-message"><p>Cảm ơn bạn đã ủng hộ BOSS BRAND. <br/><br/> Mã đơn hàng của bạn là: <span id='code'>${code}</span></p></div>
+            <div class="box-message"><p>Cảm ơn bạn đã ủng hộ MOBI HEAVEN. <br/><br/> Mã đơn hàng của bạn là: <span id='code'>${code}</span></p></div>
             <div class="box-button"><a href="index.html"><button>Quay về trang chủ</button></a></div>
         `;
         box.style.display = 'flex';

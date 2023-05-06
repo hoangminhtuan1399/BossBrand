@@ -49,14 +49,14 @@ for (const item of products) {
                         </div>
                     </div>
                 </div>
-                <div class="product_size">
-                    <label for="size">Kích thước:</label>
-                    <select name="size" id="size">
-                        <option value="S">S</option>
-                        <option value="M">M</option>
-                        <option value="L">L</option>
-                        <option value="XL">XL</option>
-                        <option value="XXL">XXL</option>
+                <div class="product_color">
+                    <label for="color">Màu:</label>
+                    <select name="color" id="color">
+                        <option value="Đen">Đen</option>
+                        <option value="Trắng">Trắng</option>
+                        <option value="Vàng">Vàng</option>
+                        <option value="Xanh">Xanh</option>
+                        <option value="Đỏ">Đỏ</option>
                     </select>
                 </div>
                 <button class="button-effect" type="button">Thêm vào giỏ hàng <i class='bx bx-right-arrow-alt'></i></button>

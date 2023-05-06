@@ -1,6 +1,6 @@
 /* Slider */
 #slider {
-    height: 100vh;
+    height: auto;
     overflow: hidden;
 }
 
@@ -100,19 +100,18 @@ h2 {
     margin-bottom: 40px;
 }
 
-#mobile,
-#sweater {
-    height: 100vh;
+#mobile, #accessory {
+    height: auto;
     width: 100%;
-    padding-top: 80px;
+    padding-top: 40px;
 }
 .mobile__container,
-.Sweater__container {
+.accessory__container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 369px;
     grid-column-gap: 30px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 .product__item {
@@ -135,8 +134,10 @@ h2 {
     display: block;
     width: 100%;
     height: auto;
+    max-height: 100%;
     transition: 0.5s ease;
     backface-visibility: hidden;
+    background-color: white;
 }
 
 .middle {
@@ -195,13 +196,6 @@ h4 {
     color: var(--text-color);
 }
 
-.t-shirt__poster {
-    border-radius: 0 40px 0 40px;
-    width: 100%;
-    height: 369px;
-    overflow: hidden;
-}
-
 .btn {
     width: 100%;
     display: flex;
@@ -222,14 +216,14 @@ h4 {
     color: var(--white-color);
 }
 
-/* Hoodie */
-#hoodie {
+/* laptop */
+#laptop {
     height: auto;
     width: 100%;
-    padding-top: 80px;
+    padding-top: 40px;
 }
 
-.hoodie__container {
+.laptop__container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 369px 369px;
@@ -238,11 +232,16 @@ h4 {
     margin-bottom: 30px;
 }
 
-.hoodie__poster {
+.laptop__poster {
     grid-column-start: 1;
     grid-column-end: 3;
     overflow: hidden;
     border-radius: 72px 0;
+}
+
+.laptop__poster img {
+    width: 100%;
+    height: 100%;
 }
 
 /* Contact */

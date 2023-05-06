@@ -9,7 +9,7 @@
 }
 
 * {
-    box-sizing: inherit;
+    box-sizing: border-box;
     margin: 0;
 }
 
@@ -254,7 +254,7 @@ ul.subcart {
     justify-content: flex-start;
     align-items: stretch; 
     border-radius: 5px;  
-    background-color: var(--primary-color); 
+    background-color: var(--primary-color);
 }
 
 ul.subcart::before {
@@ -287,16 +287,22 @@ li.subcart {
     grid-template-rows: 100%;
     margin: 0px 0px;
     padding: 5px 0px;
-    border-bottom: 0.1px solid lightsalmon;
     position: relative;
+}
+
+li.subcart:only-child {
+    border-radius: 5px !important;
+    padding: 10px 0;
 }
 
 li.subcart:first-child {
     border-radius: 5px 5px 0 0;
+    padding: 10px 0 5px;
 }
 
 li.subcart:last-child {
     border-radius: 0 0 5px 5px;
+    padding: 5px 0 10px;
 }
 
 li.subcart:hover {
@@ -325,16 +331,13 @@ span.subcart {
 
 button#delete-item {
     padding: 1px 4px;
-    border: 1px solid var(--primary-color);
+    border: none;
     position: absolute;
     top: 5px;
-    right: 0px;
-    background-color: var(--primary-color);
+    right: 5px;
+    background-color: transparent;
     color: white;
-}
-
-button#delete-item:hover {
-    background-color: var(--nav-hover);
+    cursor: pointer;
 }
 
 li.empty-cart {
@@ -347,7 +350,6 @@ li.empty-cart {
     align-items: center;
     margin: 0px 0px;
     padding: 5px 0px;
-    border-bottom: 0.1px solid lightsalmon;
     position: relative;
 }
 
@@ -449,7 +451,8 @@ li.empty-cart:before {
 }
 #infor-container>div>h4 {
     font-size: 2.2rem;
-    padding-bottom: 15px    ;
+    padding-bottom: 15px;
+    color: #eee;
 }
 #infor-container>div>p {
     font-size: 1.7rem;
