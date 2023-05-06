@@ -12,9 +12,10 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.0.1/css/boxicons.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/payment.css">
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Thanh toán</title>
 </head>
 
@@ -33,9 +34,10 @@
                             <input type="text" class="user-name" placeholder="Họ và tên" required>
                             <div class="contact-wrapper">
                                 <input type="email" class="user-mail" placeholder="Email">
-                                <input type="text" class="user-tel" placeholder="Số điện thoại" required>
+                                <input type="number" class="user-tel" placeholder="Số điện thoại" required>
                             </div>
-                            <input type="text" class="user-address" placeholder="Nhập số nhà, ngõ (nếu có), đường/phố, ..." required>
+                            <input type="text" class="user-address"
+                                placeholder="Nhập số nhà, ngõ (nếu có), đường/phố, ..." required>
                             <div class="address-wrapper">
                                 <select class="local-picker" name="provinces" required></select>
                                 <select class="local-picker" name="districts" required></select>
@@ -73,27 +75,7 @@
 
                 <div class="right-col">
                     <div class="right-col__content">
-                        <div class="product">
-                            <div class="product-wrapper">
-                                <div class="product_img">
-                                    <img src="./assets/img/t-shirts/tshirt1.jpg" alt="" style="width: 100%">
-                                </div>
-                                <div class="product_info">
-                                    <h3>T-shirt 1</h3>
-                                    <p class="size">Size: L</p>
-                                    <div class="quantity-input">
-                                        <div class="minus">
-                                            <i class='bx bx-minus'></i>
-                                        </div>
-                                        <input type="number" class="number" value="1" name="quantity" min="0" max="4" />
-                                        <div class="add">
-                                            <i class='bx bx-plus'></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <span class="product_price">250.000 VND</span>
-                        </div>
+
                     </div>
 
                     <div class="promotion">
@@ -101,35 +83,38 @@
                             <input type="text" class="promotion-form-input" placeholder="Nhập mã giảm giá" />
                             <button class="promotion-form-button">Sử dụng</button>
                         </div>
+                        <div class="discount-wrapper"></div>
                     </div>
 
                     <div class="price-wrapper">
                         <div class="price-line">
                             <p class="price_name">Tạm tính</p>
-                            <p class="price">250000 VND</p>
+                            <p class="price"></p>
                         </div>
 
                         <div class="price-line">
                             <p class="price_name">Phí vận chuyển</p>
                             <p class="shipping-price">0 VND</p>
                         </div>
+
+                        <div class="price-line">
+                            <p class="price_name">Giảm giá</p>
+                            <p class="discount">0 VND</p>
+                        </div>
                     </div>
 
                     <div class="total">
-                        <p class="total_name">Tổng cộng</p>
-                        <p class="total_price">250000 VND</p>
+                        <p class="total_name">Tổng thanh toán</p>
+                        <p class="total_price"></p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="box">
-            <div class="box-title"><h2>Đặt hàng thành công!</h2></div>
-            <div class="box-message"><p>Cảm ơn bạn đã ủng hộ BOSS BRAND.</p></div>
-            <div class="box-button"><a href="#"><button>Quay về trang chủ</button></a></div>
-        </div>
+        <div class="box"></div>
     </div>
 
     <script src="./assets/js/local-picker.min.js"></script>
+    <script src="./assets/database/voucher.js"></script>
     <script src="./assets/js/payment.js"></script>
 </body>
 

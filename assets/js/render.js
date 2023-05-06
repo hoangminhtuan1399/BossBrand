@@ -11,7 +11,7 @@ const getInnerHtml = (category, count) =>
                             product.img
                         }" alt="Avatar" class="image" style="width: 100%" />
                         <div class="middle">
-                            <a href="./detail.html?name=${product.name}" class="text" target="_blank">
+                            <a href="./detail.html?name=${product.name}" class="text">
                                 <i class="bx bx-search"></i>
                             </a>
                         </div>

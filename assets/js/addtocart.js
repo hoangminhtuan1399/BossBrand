@@ -4,6 +4,7 @@ const size = document.querySelector("select#size");
 const addtocart = document.querySelector("button.button-effect");
 const productName = document.querySelector("h1").innerText;
 const image = document.querySelector("img.image").getAttribute("src");
+const modal = document.querySelector('.noti-wrapper');
 //test
 // console.log(typeof(image));
 //Tạo danh sách giỏ hàng
@@ -13,8 +14,14 @@ if (JSON.parse(localStorage.getItem("shoppingList"))) {
 }
 //Cập nhật số lượng trong giỏ hàng
 document.querySelector("span#quantity").innerText = shoppingList.length;
+
+document.querySelector('.dot').addEventListener('click', (e) => {
+    modal.style.display = 'none';
+})
 //Chốt đơn
 addtocart.addEventListener("click", function(event){
+    // alert('Sản phẩm đã được thêm vào giỏ hàng!')
+    modal.style.display = 'block';
     let find = false;
     for (let i = 0; i < shoppingList.length; i++) {
         if (shoppingList[i].name == productName) {
@@ -34,8 +41,8 @@ addtocart.addEventListener("click", function(event){
             image : image,
         })
     }
-    console.log(shoppingList);
     localStorage.setItem("shoppingList",JSON.stringify(shoppingList));
     document.querySelector("span#quantity").innerText = shoppingList.length;
+    updateCartList();
 })
 
