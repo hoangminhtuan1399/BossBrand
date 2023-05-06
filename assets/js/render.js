@@ -9,7 +9,7 @@ const getInnerHtml = (category, count) =>
                     <div class="product__img">
                         <img src="${
                             product.img
-                        }" alt="Avatar" class="image" style="width: 100%" />
+                        }" alt="Avatar" class="image" />
                         <div class="middle">
                             <a href="./detail.html?name=${product.name}" class="text">
                                 <i class="bx bx-search"></i>
@@ -28,24 +28,19 @@ const getInnerHtml = (category, count) =>
         .join('');
 
 // get DOM element
-const tshirtEl = document.querySelector('.t-shirt__container');
-const sweaterEl = document.querySelector('.Sweater__container');
-const hoodieEl = document.querySelector('.hoodie__container');
+const mobileEl = document.querySelector('.mobile__container');
+const accessoryEl = document.querySelector('.accessory__container');
+const laptopEl = document.querySelector('.laptop__container');
 
-let tshirtHtml = getInnerHtml('t-shirt', 3);
-tshirtHtml += `
-    <div class="t-shirt__poster">
-        <img src="./assets/img/t-shirt.jpg" alt="Avatar" class="image" style="width: 100%" />
+let mobileHtml = getInnerHtml('mobile', 4);
+
+let laptopHtml = `
+    <div class="laptop__poster">
+        <img src="./assets/img/laptop.jpg" alt="Avatar" class="image" />
     </div>
 `;
+laptopHtml += getInnerHtml('laptop', 8);
 
-let hoodieHtml = `
-    <div class="hoodie__poster">
-        <img src="./assets/img/hoodie.jpg" alt="Avatar" class="image" style="height: 100%" />
-    </div>
-`;
-hoodieHtml += getInnerHtml('hoodie', 8);
-
-tshirtEl.innerHTML = tshirtHtml;
-sweaterEl.innerHTML = getInnerHtml('sweater', 4);
-hoodieEl.innerHTML = hoodieHtml;
+mobileEl.innerHTML = mobileHtml;
+accessoryEl.innerHTML = getInnerHtml('accessory', 4);
+laptopEl.innerHTML = laptopHtml;

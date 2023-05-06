@@ -4,16 +4,16 @@ const filterType = [
         value: 'all'
     },
     {
-        name: 'Dưới 300 nghìn',
-        value: 'under300'
+        name: 'Dưới 3 triệu',
+        value: 'under3'
     },
     {
-        name: 'Từ 300 - 400 nghìn',
-        value: '300-400'
+        name: 'Từ 3 - 4 triệu',
+        value: '3-4'
     },
     {
-        name: 'Trên 400 nghìn',
-        value: 'above400'
+        name: 'Trên 4 triệu',
+        value: 'above4'
     }
 ];
 
@@ -105,15 +105,15 @@ let data = products.filter((product) => product.category === category);
 
 // filter by price
 switch (filter) {
-    case 'under300':
-        data = data.filter((product) => product.price < 300000);
+    case 'under3':
+        data = data.filter((product) => product.price < 3000000);
         break;
-    case 'above400':
-        data = data.filter((product) => product.price > 400000);
+    case 'above4':
+        data = data.filter((product) => product.price > 4000000);
         break;
-    case '300-400':
+    case '3-4':
         data = data.filter(
-            (product) => product.price >= 300000 && product.price <= 400000
+            (product) => product.price >= 3000000 && product.price <= 4000000
         );
         break;
 
@@ -143,7 +143,7 @@ document.querySelector('.store').innerHTML = data
                 <div class="product__img">
                     <img src="${
                         product.img
-                    }" alt="Avatar" class="image" style="width: 100%" />
+                    }" alt="Avatar" class="image" />
                     <div class="middle">
                         <a href="./detail.html?name=${
                             product.name

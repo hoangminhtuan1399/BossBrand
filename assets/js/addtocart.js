@@ -1,12 +1,11 @@
 const quantity = document.querySelector("input.number");
-const price = document.querySelector("h2");
-const size = document.querySelector("select#size");
+const color = document.querySelector("select#color");
 const addtocart = document.querySelector("button.button-effect");
 const productName = document.querySelector("h1").innerText;
 const image = document.querySelector("img.image").getAttribute("src");
 const modal = document.querySelector('.noti-wrapper');
-//test
-// console.log(typeof(image));
+const price = products.find(item => item.name === productName).price;
+
 //Tạo danh sách giỏ hàng
 let shoppingList = [];
 if (JSON.parse(localStorage.getItem("shoppingList"))) {
@@ -25,18 +24,18 @@ addtocart.addEventListener("click", function(event){
     let find = false;
     for (let i = 0; i < shoppingList.length; i++) {
         if (shoppingList[i].name == productName) {
-            if (shoppingList[i].size == size.value) {
+            if (shoppingList[i].color == color.value) {
                 find = true;
                 shoppingList[i].quantity += parseInt(quantity.value);
-                shoppingList[i].price = shoppingList[i].quantity*parseInt(price.innerHTML.substr(0,7))*1000;
+                shoppingList[i].price = shoppingList[i].quantity*price;
             }
         }
     }
     if (find == false) {
         shoppingList.push({
             name : productName,
-            size : size.value,
-            unitPrice : parseInt(price.innerHTML.substring(0,3))*1000,            
+            color : color.value,
+            unitPrice : price,
             quantity : parseInt(quantity.value),
             image : image,
         })
