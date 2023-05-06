@@ -28,7 +28,7 @@ const getInnerHtml = (category, count) =>
         .join('');
 
 // get DOM element
-const tshirtEl = document.querySelector('.t-shirt__container');
+const tshirtEl = document.querySelector('.mobile__container');
 const sweaterEl = document.querySelector('.Sweater__container');
 const hoodieEl = document.querySelector('.hoodie__container');
 
