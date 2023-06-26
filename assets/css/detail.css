@@ -71,6 +71,10 @@ h2 {
     color: var(--primary-color);
 }
 
+.status a:hover {
+  text-decoration: underline;
+}
+
 select {
     border: 1px solid #a7a8b0;
     font-size: 1.6rem;
