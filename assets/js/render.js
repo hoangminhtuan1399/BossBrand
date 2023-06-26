@@ -5,7 +5,7 @@ const getInnerHtml = (category, count) =>
         .reverse()
         .map(
             (product) => `
-                <div class="product__item">
+                <div class="product__item" onclick="window.location.href='./detail.html?name=${product.name}'">
                     <div class="product__img">
                         <img src="${
                             product.img
